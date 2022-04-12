@@ -1,0 +1,51 @@
+import React from "react";
+import { FiMenu } from "react-icons/fi";
+import {IoIosSearch} from "react-icons/io"
+import {RiVideoAddFill} from "react-icons/ri";
+import {BsGrid3X3Gap} from "react-icons/bs"
+import {IoIosNotifications} from "react-icons/io";
+import avtarpic from "../../Assets/Images/pic.png";
+import logo from "../../Assets/Images/logo2.png";
+import "./Navbar.css";
+import Avatar from "../Avatar/Avatar";
+
+function Navbar() {
+  return (
+    <div className="navbar">
+     
+     {/* NAVBAR_LEFT_SECTION */}
+              
+      <div className="navbar--left">
+        <FiMenu size={20} />
+        <div className="navbar--logo">
+          <img className="logo-size" src={logo} alt="" srcset="" />
+          <div className="bg-color">
+            {/* <Link to="/"> */}
+            <div className="logo-txt">GRAVITY</div>
+            <small className="small-txt">Tube</small>
+            {/* </Link> */}
+          </div>
+        </div>
+      </div>
+ 
+      {/* NAVBAR_INPUT_SECTION */}
+
+      <div className="navbar--input">
+        <input type="text" />
+        <IoIosSearch size={20} className="search-btn"/>
+      </div>
+
+      {/* NAVBAR_ICONS_SECTION */}
+
+      <div className="navbar--icons">
+        <RiVideoAddFill size={20} />
+        <BsGrid3X3Gap size={20}/>
+        <IoIosNotifications size={20}/>
+        <Avatar img={avtarpic}/>
+      </div>
+
+    </div>
+  );
+}
+
+export default Navbar;
