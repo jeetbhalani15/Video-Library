@@ -1,0 +1,40 @@
+.avatar{
+    width: 3%;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: contain;
+}
+.videoCard{
+    margin-bottom: 2rem;
+    width: 16rem;
+}
+.card-image{
+    height: 10rem;
+    width: 18rem;
+}
+.videoCard--info{
+    width: 17rem;
+    background-color: #f9f9f9;
+}
+.videoCard--logo--txt{
+    display: flex;
+    width: 18rem;
+}
+.videoCard--views{
+   margin-left: 3.4rem;
+}
+.ml{
+    margin-left: 0.7rem;
+}
+.live-tag{
+    border: 2px solid red;
+    color: red;
+    padding: 0.3rem;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+.timestamp{
+    margin-bottom: 0.5rem;
+}

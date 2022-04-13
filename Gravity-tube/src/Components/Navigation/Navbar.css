@@ -1,0 +1,63 @@
+.navbar--left{
+    display: flex;
+    align-items: center;
+}
+.navbar--logo{
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    width: 76%;
+}
+.logo-size{
+    width: 25%;
+}
+.small-txt{
+    margin-left: 2rem;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    background-color: crimson;
+    padding: .3rem;
+    font-size: 11px;
+    border-radius: 7px;
+}
+.logo-txt{
+    font-weight: 700;
+}
+.bg-color{
+    margin-left: -5px;
+}
+.navbar--input{
+    display: flex;
+    align-items: center;
+    border: 1px solid grey;
+    width: 30%;
+}
+.navbar--input>input{
+    flex:1;
+    border: none;
+    padding: 0.4rem;
+}
+.navbar--icons{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1.1rem;
+}
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid lightgrey;
+}
+.search-btn{
+    width: 10%;
+    border-left: 1px solid #d1cbcb;
+    background-color: #ebebeb;
+    color: grey;
+    padding: 0.3rem;
+}
