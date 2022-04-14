@@ -8,6 +8,7 @@ import avtarpic from "../../Assets/Images/pic.png";
 import logo from "../../Assets/Images/logo2.png";
 import "./Navbar.css";
 import Avatar from "../Avatar/Avatar";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -41,7 +42,7 @@ function Navbar() {
         <RiVideoAddFill size={20} />
         <BsGrid3X3Gap size={20}/>
         <IoIosNotifications size={20}/>
-        <Avatar img={avtarpic}/>
+        <Link to="/login"><Avatar  img={avtarpic}/></Link>
       </div>
 
     </div>
