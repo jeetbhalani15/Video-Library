@@ -1,7 +1,9 @@
 
 .background{
     background-color: #dedede;
-    height: 120vh;
+    height: 128vh;
+    background-color: #131319;
+    color: white;
 }
 .login-box{
     justify-content: center;
@@ -16,16 +18,30 @@
     font-size: 1.3rem;
     border: 0px solid #ff8080;
     padding: 3rem;
-    box-shadow: 0 0 17px grey;
+    box-shadow: 0 0 15px #3c3c3c;
 }
 .form__input{
     padding: 0.5rem;
     margin-top: 0.5rem;
-    border: 2px solid #ff7a7a;
+    border: 1px solid #686868;
     border-radius: 6px;
     background: transparent;
     margin-bottom: 0.5rem;
+    color: white;
 }
+.login-credals{
+    position: relative;
+}
+.toggle{
+    color: #a22c2c;
+    font-size: 1.3rem;
+    position: absolute;
+    /* bottom: -9%; */
+    /* right: 5%; */
+    right: 4%;
+    border: -15%;
+    bottom: 51%;
+  }
 .pd{
     font-size: 1.3rem;
     color: #ff4c4c;
@@ -44,7 +60,7 @@
 .auth-signup-btn{
     width: fit-content;
     padding: 0.5rem 10.7rem;
-    background-color: #ff3030;
+    background-color: #b7372e;
     border: none;
     color: white;
     margin-top: 1rem;
@@ -53,9 +69,19 @@
 .guest-login-btn{
     width: fit-content;
     padding: 0.5rem 7.7rem;
-    background-color: #ff3030;
+    background-color: #b7372e;
     border: none;
     color: white;
     margin-top: 1rem;
     font-size: 1rem;
 }
+.logo{
+    width: 8rem;
+}
+.auth-icon{
+    margin-right: 1rem;
+}
+/* .signup-eye-btn{
+    position: absolute;
+    bottom: 20%;  
+} */

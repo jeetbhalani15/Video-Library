@@ -7,6 +7,7 @@ import axios from "axios";
 import { useAuth } from "../../../Contexts/Auth-context";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import logo from "../../../Assets/Images/gt-logo.png";
 
 export function Login() {
   const { authState, authDispatch } = useAuth();
@@ -81,17 +82,16 @@ export function Login() {
       <div className="background">
         <div className="login-box">
           <div className="login-content">
-            {/* <div className="auth-logo">
+            <div className="auth-logo">
               <div className="logo-mg">
                 <img className="logo" src={logo} alt="logo" />
               </div>
-              <div className="bg-color">
-                ZERO
+              {/* <div className="bg-color">
                 <div>GRAVITY</div>
-                <small className="small-txt">Store</small>
-              </div>
-            </div> */}
-            <span className="pd">Login with 0`Gravity Account</span>
+                <small className="small-txt">Tube</small>
+              </div> */}
+            </div>
+            <span className="pd">Login with Gravity Tube Account</span>
             <div className="login-credals">
               <form
                 action="#"

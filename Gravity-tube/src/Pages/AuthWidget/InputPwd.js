@@ -21,8 +21,8 @@ const InputPwd = ({
       />
 
       <i
-        className={isHidden ? "fa fa-eye-slash" : "fa fa-eye"}
-        id="toggle"
+        className={isHidden ? " toggle fa fa-eye-slash signup-eye-btn " : " toggle fa fa-eye signup-eye-btn "}
+        
         onClick={() => setIsHidden((flag) => !flag)}
       ></i>
     </>
