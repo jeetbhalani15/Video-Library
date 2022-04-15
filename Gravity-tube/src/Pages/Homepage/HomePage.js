@@ -7,10 +7,12 @@ import "./HomePage.css";
 function HomePage() {
   return (
       <>
+      <div className="main">
     <Navbar/>
     <div className="body-content">
       <Sidebar/>
       <VideoListing/>
+    </div>
     </div>
     </>
   )

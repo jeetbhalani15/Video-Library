@@ -5,9 +5,10 @@ import {RiVideoAddFill} from "react-icons/ri";
 import {BsGrid3X3Gap} from "react-icons/bs"
 import {IoIosNotifications} from "react-icons/io";
 import avtarpic from "../../Assets/Images/pic.png";
-import logo from "../../Assets/Images/logo2.png";
+import logo from "../../Assets/Images/gt-logo.png";
 import "./Navbar.css";
 import Avatar from "../Avatar/Avatar";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -32,7 +33,7 @@ function Navbar() {
 
       <div className="navbar--input">
         <input type="text" />
-        <IoIosSearch size={20} className="search-btn"/>
+        <button className="search-btn"><IoIosSearch size={18} /></button>
       </div>
 
       {/* NAVBAR_ICONS_SECTION */}
@@ -41,7 +42,7 @@ function Navbar() {
         <RiVideoAddFill size={20} />
         <BsGrid3X3Gap size={20}/>
         <IoIosNotifications size={20}/>
-        <Avatar img={avtarpic}/>
+        <Link to="/login"><Avatar  img={avtarpic}/></Link>
       </div>
 
     </div>

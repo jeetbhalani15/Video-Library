@@ -4,6 +4,8 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 }
 .sidebar-box{
     flex: 0.18;
+    background-color: #131319;
+    color: white;
 }
 .sidebar-box > hr {
     height: 1px;
