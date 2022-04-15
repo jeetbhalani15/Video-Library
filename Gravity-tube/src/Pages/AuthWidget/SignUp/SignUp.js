@@ -7,6 +7,8 @@ import { InputPwd } from "../InputPwd";
 import { useAuth } from "../../../Contexts/Auth-context";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import logo from "../../../Assets/Images/gt-logo.png";
+import "./Signup.css";
 
 export function SignUp() {
   const [error, setError] = useState("");
@@ -178,17 +180,17 @@ export function SignUp() {
       <div className="background">
         <div className="login-box">
           <div className="login-content">
-            {/* <div className="auth-logo">
+            <div className="auth-logo">
               <div className="logo-mg">
                 <img className="logo" src={logo} alt="logo" />
               </div>
-              <div className="bg-color">
+              {/* <div className="bg-color">
                 ZERO
                 <div>GRAVITY</div>
                 <small className="small-txt">Store</small>
-              </div>
-            </div> */}
-            <span className="pd">Sign Up with 0`Gravity Account</span>
+              </div> */}
+            </div>
+            <span className="pd">Sign Up with Gravity Tube Account</span>
             <div className="login-credals">
               <form action="#" method="#" className="form login">
                 <div className="form__field">
@@ -310,7 +312,8 @@ export function SignUp() {
                     </span>
                     <span className="hidden">Password</span>
                   </label>
-                  <InputPwd
+  
+                  <InputPwd 
                     placeholderTxt={"Password"}
                     value={formState.password}
                     onChangeHandler={(e) => {
@@ -323,6 +326,7 @@ export function SignUp() {
                       onFocusCleanErr("SHOW_PWD_ERROR");
                     }}
                   />
+                  
                 </div>
                 <div
                   className="form-err"
