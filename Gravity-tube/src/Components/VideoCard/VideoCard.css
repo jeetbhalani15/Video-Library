@@ -14,7 +14,8 @@
 }
 .videoCard--info{
     width: 17rem;
-    background-color: #f9f9f9;
+    background-color: transparent;
+    color: #e5e5e5;
 }
 .videoCard--logo--txt{
     display: flex;

@@ -9,19 +9,22 @@
     width: 76%;
 }
 .logo-size{
-    width: 25%;
+    width: 12%;
 }
 .small-txt{
     margin-left: 2rem;
     color: rgb(255, 255, 255);
     font-weight: 600;
-    background-color: crimson;
-    padding: .3rem;
-    font-size: 11px;
-    border-radius: 7px;
+    color: red;
+    /* background-color: #d00b0b;; */
+    /* padding: .3rem; */
+    /* font-size: 11px; */
+    /* border-radius: 7px; */
 }
 .logo-txt{
     font-weight: 700;
+    color: white;
+    font-size: 0.9rem;
 }
 .bg-color{
     margin-left: -5px;
@@ -29,8 +32,9 @@
 .navbar--input{
     display: flex;
     align-items: center;
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     width: 30%;
+    margin-right: 10rem;
 }
 .navbar--input>input{
     flex:1;
@@ -52,10 +56,13 @@
     align-items: center;
     justify-content: space-between;
     padding: 12px;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid #4a4a4a;;
+    background-color: #131319;
+    color: white;
 }
 .search-btn{
-    width: 10%;
+    border: none;
+    width: 12%;
     border-left: 1px solid #d1cbcb;
     background-color: #ebebeb;
     color: grey;
