@@ -1,3 +1,5 @@
 .body-content{
     display: flex;
+    height: 160rem;
+    background-color: #212121;
 }

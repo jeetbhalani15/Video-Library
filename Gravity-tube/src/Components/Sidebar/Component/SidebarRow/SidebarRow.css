@@ -10,12 +10,13 @@
 .sidebar-title{
     flex:1;
     margin-left: 20px;
-    font-size: 12px;
+    font-size: 17px;
     font-weight: 500;
 }
 .sidebar-row:hover{
-    background-color: #4a4a4a;
+    background-color: #292929;;
     cursor: pointer;
+    border-radius: 12px;
 }
 .sidebar-row:hover > .sidebar-icon{
     color: red;
@@ -24,7 +25,8 @@
     font-weight: bold;
 }
 .sidebar-row.selected{
-    background-color: #4a4a4a;
+    background-color: #292929;
+    border-radius: 12px;
 }
 .sidebar-row.selected > .sidebar-title{
     font-weight: bold;

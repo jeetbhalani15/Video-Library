@@ -1,14 +1,11 @@
 import { AuthProvider } from "./Auth-context";
-const StateProvider = ({children})=>{
-    return(
-        
-        <AuthProvider>
-            
-            {children}
-           
-        </AuthProvider>
-        
-    );
-}
+import { VideoProvider } from "./Videos-context";
+const StateProvider = ({ children }) => {
+  return (
+    <AuthProvider>
+      <VideoProvider>{children}</VideoProvider>
+    </AuthProvider>
+  );
+};
 
-export {StateProvider};
+export { StateProvider };
