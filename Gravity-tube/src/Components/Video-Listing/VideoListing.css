@@ -18,7 +18,7 @@
   overflow: auto;
   scroll-behavior: smooth;
   /* height: 48.7rem; */
-  height: calc(100vh - 11rem);
+  height: calc(100vh - 10.7rem);
 }
 
 /* scroll bar */
