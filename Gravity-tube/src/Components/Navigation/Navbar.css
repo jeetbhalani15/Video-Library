@@ -43,7 +43,7 @@
 .navbar--input>input{
     flex:1;
     border: none;
-    padding: 0.7rem;
+    padding: 0.4rem;
     background-color: #253331;
     outline: none;
     color: white;
@@ -74,7 +74,7 @@
     border-left: 1px solid #636363;
     background-color: #ebebeb;
     color: rgb(255, 255, 255);
-    padding: 0.8rem;
-    height: 3rem;
+    padding: 0.5rem;
+    height: 2.2rem;
     background-color: #253331;
 }

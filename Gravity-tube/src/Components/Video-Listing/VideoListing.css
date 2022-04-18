@@ -14,7 +14,7 @@
 .videos-container{
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 4rem;
   overflow: auto;
   scroll-behavior: smooth;
   /* height: 48.7rem; */

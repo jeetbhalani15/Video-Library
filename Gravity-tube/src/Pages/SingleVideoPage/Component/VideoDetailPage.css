@@ -7,7 +7,7 @@
 }
 .video-info-container{
     display: grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 72% 28%;
     margin-bottom: 2rem;
 }
 .video-info{
@@ -38,9 +38,9 @@
 }
 .views{
     display: flex;
-    gap: 38rem;
+    gap: 26rem;
     margin-top: 0.8rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: darkgrey;
 }
 .action-icons{
@@ -48,13 +48,12 @@
     align-items: center;
     gap: 1.2rem;
     color: white;
-    font-weight: 500;
 }
 .action-btn{
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     border: none;
 }
 .action-btn:hover{

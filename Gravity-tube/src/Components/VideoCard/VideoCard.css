@@ -6,21 +6,21 @@
 }
 .videoCard{
     margin-bottom: 2rem;
-    width: 21rem;
+    width: 15rem;
 }
 .videoCard:hover{
     cursor: pointer;
 }
 .card-image{
-    height: 14rem;
-    width: 23rem;
+    height: 10rem;
+    width: 18rem;
     border-radius: 4px;
 }
 .card-image:hover{
     opacity: .8;
 }
 .videoCard--info{
-    width: 23rem;
+    width: 18rem;
     background-color: transparent;
     color: #e5e5e5;
 }
@@ -35,13 +35,14 @@
     margin-left: 3.4rem;
     color: #9C9C9C;
     margin-top: 0.6rem;
-    width: 17rem;
+    width: 15rem;
     font-size: 1.1rem;
    
 }
 .ml{
     margin-left: 0.7rem;
     color: white;
+    font-size: 0.9rem;
 }
 .live-tag{
     border: 2px solid red;

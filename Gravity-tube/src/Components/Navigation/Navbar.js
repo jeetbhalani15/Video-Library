@@ -17,7 +17,7 @@ function Navbar() {
      {/* NAVBAR_LEFT_SECTION */}
               
       <div className="navbar--left">
-        <FiMenu size={30} />
+        <FiMenu size={20} />
         <div className="navbar--logo">
           <img className="logo-size" src={logo} alt="" srcset="" />
           <div className="bg-color">
