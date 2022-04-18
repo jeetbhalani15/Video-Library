@@ -40,11 +40,24 @@
     gap: 38rem;
     margin-top: 0.8rem;
     font-size: 1.2rem;
+    color: darkgrey;
 }
 .action-icons{
     display: flex;
     align-items: center;
     gap: 1.2rem;
+    color: white;
+    font-weight: 500;
+}
+.action-btn{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+}
+.action-btn:hover{
+    transform: scaleX(1.05);
 }
 .action-icons > span{
     margin-left: -0.5rem;

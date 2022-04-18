@@ -36,14 +36,14 @@ function VideoDetailPage({}) {
             <div className="views">
               {currentVideo.views} • {currentVideo.timestamp}
               <div className="action-icons">
-                <AiOutlineLike size={28} />
-                <span>768</span>
-                <AiOutlineDislike size={22} />
-                <span>Dislike</span>
-                <RiPlayListAddFill size={26} />
-                <span>save</span>
-                <MdOutlineWatchLater size={28} />
-                <span>Watch Later</span>
+                <div className="action-btn"><AiOutlineLike size={28} />
+                <span>768</span></div>
+                <div className="action-btn"><AiOutlineDislike size={28} />
+                <span>Dislike</span></div>
+                <div className="action-btn"><RiPlayListAddFill size={28} />
+                <span>save</span></div>
+                <div className="action-btn"><MdOutlineWatchLater size={28} />
+                <span>Watch Later</span></div>
               </div>
             </div>
           </div>
