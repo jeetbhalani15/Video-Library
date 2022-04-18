@@ -1,9 +1,10 @@
 .video-box{
-  flex: 0.82;
+  flex: 0.85;
   background-color: #f9f9f9;
   padding: 40px 20px;
   padding-bottom: 0;
-  background-color: #131319;
+  background-color: #1c1c1c;
+  border-left: 2px solid #454545;
 }
 .video-box > h2{
     margin-left: 5px;
@@ -13,5 +14,33 @@
 .videos-container{
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 4rem;
+  overflow: auto;
+  scroll-behavior: smooth;
+  /* height: 48.7rem; */
+  height: calc(100vh - 10.7rem);
+}
+
+/* scroll bar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* background: #6bbab4; */
+  background: #46706d;  
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  /* background: #46706d; */
+  background: #6bbab4;
 }

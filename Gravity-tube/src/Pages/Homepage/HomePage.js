@@ -1,21 +1,19 @@
-import React from 'react'
-import Navbar from '../../Components/Navigation/Navbar'
-import Sidebar from '../../Components/Sidebar/Sidebar'
-import VideoListing from '../../Components/Video-Listing/VideoListing'
+import React from "react";
+import Navbar from "../../Components/Navigation/Navbar";
+import Sidebar from "../../Components/Sidebar/Sidebar";
+import VideoListing from "../../Components/Video-Listing/VideoListing";
 import "./HomePage.css";
 
 function HomePage() {
   return (
-      <>
-      <div className="main">
-    <Navbar/>
-    <div className="body-content">
-      <Sidebar/>
-      <VideoListing/>
-    </div>
-    </div>
+    <>
+      <Navbar />
+      <div className="body-content">
+        <Sidebar />
+        <VideoListing />
+      </div>
     </>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;

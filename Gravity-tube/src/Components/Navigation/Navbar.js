@@ -5,7 +5,7 @@ import {RiVideoAddFill} from "react-icons/ri";
 import {BsGrid3X3Gap} from "react-icons/bs"
 import {IoIosNotifications} from "react-icons/io";
 import avtarpic from "../../Assets/Images/pic.png";
-import logo from "../../Assets/Images/gt-logo.png";
+import logo from "../../Assets/Images/logo4.png";
 import "./Navbar.css";
 import Avatar from "../Avatar/Avatar";
 import { Link } from "react-router-dom";
@@ -32,8 +32,8 @@ function Navbar() {
       {/* NAVBAR_INPUT_SECTION */}
 
       <div className="navbar--input">
-        <input type="text" />
-        <button className="search-btn"><IoIosSearch size={18} /></button>
+        <input type="text" placeholder="Search.." />
+        <IoIosSearch className="search-btn" size={30} />
       </div>
 
       {/* NAVBAR_ICONS_SECTION */}

@@ -7,7 +7,7 @@ import axios from "axios";
 import { useAuth } from "../../../Contexts/Auth-context";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import logo from "../../../Assets/Images/gt-logo.png";
+import logo from "../../../Assets/Images/logo4.png";
 
 export function Login() {
   const { authState, authDispatch } = useAuth();

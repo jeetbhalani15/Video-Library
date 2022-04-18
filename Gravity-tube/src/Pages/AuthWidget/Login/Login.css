@@ -18,7 +18,7 @@
     font-size: 1.3rem;
     border: 0px solid #ff8080;
     padding: 3rem;
-    box-shadow: 0 0 15px #3c3c3c;
+    box-shadow: 0 0 15px #285849;
 }
 .form__input{
     padding: 0.5rem;
@@ -44,14 +44,14 @@
   }
 .pd{
     font-size: 1.3rem;
-    color: #ff4c4c;
+    color: #009688;
     font-weight: 600;
     margin-bottom: 1rem;
 }
 .form-err{
     display: block;
     width: 25rem;
-    color: #3f51b5;
+    color: #db2020;
 }
 .form__field{
     display: flex;
@@ -60,7 +60,7 @@
 .auth-signup-btn{
     width: fit-content;
     padding: 0.5rem 10.7rem;
-    background-color: #b7372e;
+    background-color: #009688;
     border: none;
     color: white;
     margin-top: 1rem;
@@ -69,7 +69,7 @@
 .guest-login-btn{
     width: fit-content;
     padding: 0.5rem 7.7rem;
-    background-color: #b7372e;
+    background-color: #009688;
     border: none;
     color: white;
     margin-top: 1rem;
@@ -78,9 +78,13 @@
 .logo{
     width: 8rem;
 }
-.auth-icon{
-    margin-right: 1rem;
+.link{
+    color: dimgray;
 }
+.text--center{
+    margin-top: 1rem;
+}
+
 /* .signup-eye-btn{
     position: absolute;
     bottom: 20%;  

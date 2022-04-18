@@ -1,6 +1,8 @@
 .avtar-pic{
-    width: 26%;
     border-radius: 50%;
     height: 2.6rem;
     box-shadow: 0 0px 2px black;
+}
+.avtar-pic:hover{
+    opacity: 0.8;
 }

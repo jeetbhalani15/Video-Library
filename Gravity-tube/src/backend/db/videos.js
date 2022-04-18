@@ -18,7 +18,7 @@ export const videos = [
   },
   {
     _id: "GbQ8WKE6A9M",
-    title: "Badminton Deception | Most Unpredictable Shots in this Sports",
+    title: "Badminton Deception | Most Unpredictable Shots in this...",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
       image: "https://i.ytimg.com/vi/GbQ8WKE6A9M/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDxaeNu_Qvu40rsQmeP4FTkI2i9vQ",
@@ -30,7 +30,7 @@ export const videos = [
   },
   {
     _id: "Hf-n1yfd8II",
-    title: "Badminton Semi-Finals: Lee Chong Wei vs Lin Dan - Rio 2016 FULL Replay | Throwback",
+    title: "Badminton Semi-Finals: Lee Chong Wei vs Lin Dan - Rio...",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
       image: "https://i.ytimg.com/vi/Hf-n1yfd8II/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCFMfQcr5JyapqKE5MLcUnyFGOn4g",
@@ -54,7 +54,7 @@ export const videos = [
   },
   {
     _id: "yqg4iAzEDN8",
-    title: "Badminton Jump Smash Tutorial - Footwork & technique!",
+    title: "Badminton Jump Smash Tutorial - Footwork..",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
       image: "https://i.ytimg.com/vi/yqg4iAzEDN8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCRgCaL5az1J45UKNRFNu33j8C1vQ",
@@ -66,7 +66,7 @@ export const videos = [
   },
   {
     _id: "2YgvSZ55dWU",
-    title: "Elon Musk drops out of Twitter board | Business News | Latest English News | WION",
+    title: "Elon Musk drops out of Twitter board | Business News...",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
       image: "https://i.ytimg.com/vi/2YgvSZ55dWU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCZC0NY5-Yqun7Y0Ej3GCguP6vyBw",
@@ -78,7 +78,7 @@ export const videos = [
   },
   {
     _id: "2YgvSZ55dWU",
-    title: "Elon Musk drops out of Twitter board | Business News | Latest English News | WION",
+    title: "Elon Musk drops out of Twitter board | Business News...",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
       image: "https://i.ytimg.com/vi/2YgvSZ55dWU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCZC0NY5-Yqun7Y0Ej3GCguP6vyBw",
@@ -90,7 +90,7 @@ export const videos = [
   },
   {
     _id: "bA_TFNQhrFw",
-    title: "Geomagnetic storm to hit Earth on April 6, 7 as a canyon of fire on Sun explodes | Oneindia News",
+    title: "Geomagnetic storm to hit Earth on April 6, 7 as a..",
     description:
       "Geomagnetic storm to hit Earth on April 6, 7 as a canyon of fire on Sun explodes | Oneindia NewsThe Space Weather Prediction Center under the National Oceanic and Atmospheric Administration has predicted a solar radiation storm on Wednesday and Thursday.",
       image: "https://i.ytimg.com/vi/bA_TFNQhrFw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLADhaJXD_e68h8D4UPMwsatPC40sw",
@@ -102,7 +102,7 @@ export const videos = [
   },
   {
     _id: "N7VZ6iqYHyk",
-    title: "IPL reboot: Can CSK end losing streak against familiar foes RCB?",
+    title: "IPL reboot: Can CSK end losing streak against familiar RCB?",
     description:
       "Having lost four in four, a loss against Royal Challengers Bangalore would mean that Chennai Super Kings would be looking down and a horror season with their chances of making to the top four getting even more slimmer. Will Chennai register their first win against RCB?",
       image: "https://i.ytimg.com/vi/N7VZ6iqYHyk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB96LYWLyqVmScTY0RsC1a8V9ngYQ",
@@ -114,11 +114,11 @@ export const videos = [
   },
   {
     _id: "wLDEMj4SKZQ",
-    title: "PM Modi's remarks at 14th Foundation Day celebration of Umiya Mata Temple in Junagadh, Gujarat",
+    title: "PM Modi's remarks at 14th Foundation Day celebration..",
     description:
       "On the occasion of Ram Navami, Prime Minister Shri Narendra Modi addressed the 14th Foundation Day celebration at Umiya Mata Temple at Gathila, Junagadh in Gujarat today via video conferencing. Chief Minister of Gujarat, Shri Bhupendrabhai Patel and Union Minister Shri .",
       image: "https://i.ytimg.com/vi/wLDEMj4SKZQ/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAq5CHyAygoGP_goxqKpivSI9oLVg",
-      channel: "Narendra Modi",
+      channel: "Narendra Modi ✔",
       views: "26k views",
       timestamp: "2 days ago",
       category: "news",
@@ -150,11 +150,11 @@ export const videos = [
   },
   {
     _id: "aWzlQ2N6qqg",
-    title: "Marvel Studios' Doctor Strange in the Multiverse of Madness | Official Trailer",
+    title: "Marvel Studios' Doctor Strange in the Multiverse Official..",
     description:
       "Enter a new dimension of Strange. Watch the official trailer for Marvel Studios' Doctor Strange in the Multiverse of Madness. Only in theaters May 6.",
       image: "https://i.ytimg.com/vi/aWzlQ2N6qqg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAqEVUzcUs517Q228R5STiEXhP7xQ",
-      channel: "Marvel Entertainment",
+      channel: "Marvel Entertainment ✔",
       views: "47M views",
       timestamp: "1 months ago",
       category: "movies",
@@ -162,7 +162,7 @@ export const videos = [
   },
   {
     _id: "aWzlQ2N6qqg",
-    title: "Marvel Studios' Doctor Strange in the Multiverse of Madness | Official Trailer",
+    title: "Marvel Studios' Doctor Strange in the Multiverse Official..",
     description:
       "Enter a new dimension of Strange. Watch the official trailer for Marvel Studios' Doctor Strange in the Multiverse of Madness. Only in theaters May 6.",
       image: "https://i.ytimg.com/vi/aWzlQ2N6qqg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAqEVUzcUs517Q228R5STiEXhP7xQ",
@@ -174,31 +174,31 @@ export const videos = [
   },
   {
     _id: "FokmgJ3bIoM",
-    title: "THE LAUNCH PARTY [DAY 2 - HINDI] - BATTLEGROUNDS MOBILE INDIA",
+    title: "THE LAUNCH PARTY [DAY 2] BATTLEGROUNDS MOBILE..",
     description:
       "Enjoyed Day 1? Day 2 is going to be even more exciting! Your favorite streamers are pumped up to take the party to the next level and kick-start the celebrations! ",
       image: "https://i.ytimg.com/vi/FokmgJ3bIoM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD1-OlZpM7Q5GUTf7pNes6IdzZBUQ",
-      channel: "BATTLEGROUNDS MOBILE INDIA",
+      channel: "BATTLEGROUNDS MOBILE INDIA ✔",
       views: "7.1M views",
-      timestamp: "streamed 5months ago",
+      timestamp: "5 months ago",
       category: "games",
       channelImage: "https://yt3.ggpht.com/fGvQjp1vAT1R4bAKTFLaSbdsfdYFDwAzVjeRVQeikH22bvHWsGULZdwIkpZXktcXZc5gFJuA3w=s88-c-k-c0x00ffffff-no-rj"
   },
   {
     _id: "UORN-Z3c-nA",
-    title: "RP KA KING MOTA BHAI BACK IN NO PIXEL INDIA KANCHA KI BHABHI SAGE?",
+    title: "RP KA KING MOTA BHAI BACK IN NO PIXEL INDIA...",
     description:
       "Enjoyed Day 1? Day 2 is going to be even more exciting! Your favorite streamers are pumped up to take the party to the next level and kick-start the celebrations! ",
       image: "https://i.ytimg.com/vi/UORN-Z3c-nA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC_Ez1d7sHhnltsqAtcrSRDLLA8JQ",
       channel: "Mota Bhai",
       views: "27k views",
-      timestamp: "Streamed live on Jan 25, 2022",
+      timestamp: "Streamed Jan 25, 2022",
       category: "games",
       channelImage: "https://yt3.ggpht.com/CjPSODoUZyzD1lsh72vm_dKvNl2zXcIdGkpTxecySuT20U0d5Bn9lU1ZhoAu5YBWveLltGUF=s88-c-k-c0x00ffffff-no-rj"
   },
   {
     _id: "R3P_WcSTHMU",
-    title: "DAILY STREAMER IS BACK WITH DAILY STREAMS ! BLACK BULLS WHITELISTED? HYDRA NOW?",
+    title: "DAILY STREAMER IS BACK WITH DAILY STREAMS ! BLACK BULLS..",
     description:
       "Enjoyed Day 1? Day 2 is going to be even more exciting! Your favorite streamers are pumped up to take the party to the next level and kick-start the celebrations! ",
       image: "https://i.ytimg.com/vi/R3P_WcSTHMU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCE1WbxeZhwIztw-qPMzsMYrsN2SQ",
@@ -210,7 +210,7 @@ export const videos = [
   },
   {
     _id: "bgWPTvbw5TU",
-    title: "GTA 5: FIGHTING TSUNAMI WITH TECHNO GAMERZ (GONE WRONG!!)😱",
+    title: "GTA 5:FIGHTING TSUNAMI WITH TECHNO (GONE WRONG!!)😱",
     description:
       "Enjoyed Day 1? Day 2 is going to be even more exciting! Your favorite streamers are pumped up to take the party to the next level and kick-start the celebrations! ",
       image: "https://i.ytimg.com/vi/bgWPTvbw5TU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLByl4emEewcl_sBELoRtu15-JQLiQ",
@@ -234,19 +234,19 @@ export const videos = [
   },
   {
     _id: "Tc8kb5HBNrA",
-    title: "Video: Mast Nazron Se | Rochak K ft Jubin Nautiyal, Nikita Dutta | Manoj M | Ashish P | Bhushan K",
+    title: "Video: Mast Nazron Se | Rochak K ft Jubin Nautiyal, Nikita Dutta..",
     description:
     "Presenting #MastNazronSe Song by #JubinNautiyal Gulshan Kumar & TSeries peresents Bhushan Kumar's 'Mast Nazron Se' featuring Jubin Nautiyal & Nikita Dutta Feat. Himansh Kohli and Anushka Sen. Sung by Jubin Nautiyal, composed by Rochak  ",
       image: "https://i.ytimg.com/vi/Tc8kb5HBNrA/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLATonY37CPAYUcKOMumMUTydRkhTw",
-      channel: "T-Series",
+      channel: "T-Series ✔",
       views: "39M views",
-      timestamp: "Premiered Mar 31, 2022",
+      timestamp: "Premiered Mar31 2022",
       category: "music",
       channelImage: "https://yt3.ggpht.com/DzaZaTX6gdgjjPI_vkNc2dPbI794UroI9fTAunua0fa7lukDj5NDkjfhS5-w2KXuvXS02r92=s88-c-k-c0x00ffffff-no-rj"
   },
   {
     _id: "nNZvaMoiATE",
-    title: "Coke Studio | Season 14 | Phir Milenge | Faisal Kapadia x Young Stunners",
+    title: "Coke Studio | Season 14 | Phir Milenge | Faisal Kapadia",
     description:
     "Presenting #MastNazronSe Song by #JubinNautiyal Gulshan Kumar & TSeries peresents Bhushan Kumar's 'Mast Nazron Se' featuring Jubin Nautiyal & Nikita Dutta Feat. Himansh Kohli and Anushka Sen. Sung by Jubin Nautiyal, composed by Rochak  ",
       image: "https://i.ytimg.com/vi/nNZvaMoiATE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCDCJNalwL66SQF8Pmlg80yCdK2wQ",
@@ -258,19 +258,19 @@ export const videos = [
   },
   {
     _id: "KfUExOXxU5Q",
-    title: "Kutty Pattas Music Video | Ashwin | Reba John | Venki | Santhosh Dhayanidhi | Sandy",
+    title: "Kutty Pattas Music Video | Ashwin | Reba John | Venki..",
     description:
     "Presenting #MastNazronSe Song by #JubinNautiyal Gulshan Kumar & TSeries peresents Bhushan Kumar's 'Mast Nazron Se' featuring Jubin Nautiyal & Nikita Dutta Feat. Himansh Kohli and Anushka Sen. Sung by Jubin Nautiyal, composed by Rochak  ",
       image: "https://i.ytimg.com/vi/KfUExOXxU5Q/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDwgOgoG-gurqAiOyNT_dbQigWNog",
       channel: "Sony Music South",
       views: "161M views",
-      timestamp: "Mar 26, 2021",
+      timestamp: "Mar 26,2021",
       category: "music",
       channelImage: "https://yt3.ggpht.com/ytc/AKedOLRSu0SoelpGmqyAj7H-l9AvN_a4GiV145VwyF4yqA=s88-c-k-c0x00ffffff-no-rj"
   },
   {
     _id: "eWjGh61Gacg",
-    title: "Baaki Baatein Peene Baad - Arjun Kanungo feat. Badshah | Nikke Nikke Shots | Party Song of The Year",
+    title: "Baaki Baatein Peene Baad - Arjun Kanungo feat. Badshah | ",
     description:
     "India’s newest Pop Music heartthrob #ArjunKanungo releases his debut single “Baaki Baatein Peene Baad” featuring the Rap superstar, Badshah ! With lyrics by Mayur Puri – the lyricist of Bollywood chartbusters like Selfie Le Le Re, ABDC 2 and Happy New Year, and rap by Badshah of   ",
       image: "https://i.ytimg.com/vi/eWjGh61Gacg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDzgOnlA3uwi9uST_l_gwiTiGONUA",

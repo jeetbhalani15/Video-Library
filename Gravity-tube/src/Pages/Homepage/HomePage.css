@@ -1,3 +1,28 @@
 .body-content{
     display: flex;
+    height: fit-content;
+    background-color: #212121;
 }
+/* scroll bar */
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #212121;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    /* background: #6bbab4; */
+    background: #46706d;  
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    /* background: #46706d; */
+    background: #6bbab4;
+  }

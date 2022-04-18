@@ -6,26 +6,43 @@
 }
 .videoCard{
     margin-bottom: 2rem;
-    width: 16rem;
+    width: 15rem;
+}
+.videoCard:hover{
+    cursor: pointer;
 }
 .card-image{
     height: 10rem;
     width: 18rem;
+    border-radius: 4px;
+}
+.card-image:hover{
+    opacity: .8;
 }
 .videoCard--info{
-    width: 17rem;
+    width: 18rem;
     background-color: transparent;
     color: #e5e5e5;
 }
 .videoCard--logo--txt{
     display: flex;
-    width: 18rem;
+    width: -webkit-fill-available;
+}
+.videoCard--text{
+    margin-top: 0.5rem;
 }
 .videoCard--views{
-   margin-left: 3.4rem;
+    margin-left: 3.4rem;
+    color: #9C9C9C;
+    margin-top: 0.6rem;
+    width: 15rem;
+    font-size: 1.1rem;
+   
 }
 .ml{
     margin-left: 0.7rem;
+    color: white;
+    font-size: 0.9rem;
 }
 .live-tag{
     border: 2px solid red;
@@ -38,4 +55,11 @@
 }
 .timestamp{
     margin-bottom: 0.5rem;
+}
+.more-option-btn{
+    visibility: hidden;
+}
+.videoCard--logo--txt:hover > .more-option-btn{
+ visibility: visible;
+
 }

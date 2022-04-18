@@ -1,0 +1,161 @@
+.video-container{
+    background-color: #212121;
+}
+.video-area{
+    background-color: blue;
+    height: 40rem;
+}
+.video-info-container{
+    display: grid;
+    grid-template-columns: 72% 28%;
+    margin-bottom: 2rem;
+}
+.video-info{
+    height: 8rem;
+    color: white;
+    padding: 1rem;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #555353;
+}
+.video-details{
+    padding-left: 4rem;
+}
+.channel-info{
+    color: white;
+    padding: 1rem;
+    border-bottom: 1px solid #555353;
+}
+.similar-videos-area{
+    height: 100%;
+    color: white;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+.hash-tags{
+    color: #4e4efd;
+}
+.views{
+    display: flex;
+    gap: 21rem;
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    color: darkgrey;
+}
+.action-icons{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    color: white;
+}
+.action-btn{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    border: none;
+}
+.action-btn:hover{
+    transform: scaleX(1.05);
+}
+.action-icons > span{
+    margin-left: -0.5rem;
+}
+.channel-logo{
+    display: flex;
+}
+.info{
+    padding: 1rem;
+    width: 58rem;
+}
+.channel-name{
+    margin-top: 0.3rem;
+    margin-left: 1rem;
+}
+
+/* simialr video card */
+.similar-video-card{
+    display: flex;
+    margin-top: 0.5rem;
+}
+.similar-video-card > img{
+    width: 15rem;
+}
+.similar-video-title{
+    margin-left: .4rem;
+    margin-top: 0.3rem;
+}
+
+/* comments section */
+.video-Comments{
+    color: white;
+}
+.player-wrapper {
+    position: relative;
+    padding-top: 35.25%; /* 720 / 1280 = 0.5625 */
+  }
+  
+  .react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important ;
+    height: 100% !important;
+  }
+
+
+  @media screen and (max-width:870px) {
+    .content{
+        width: 84rem;
+    }
+    .views{
+          gap: 10rem;
+      }
+      .info{
+          width: 50rem;
+      }
+  }
+
+  @media screen and (max-width:670px) {
+    .similar-video-card > img {
+        width: 14rem;
+    }
+    .content{
+        width: 83rem;
+    }
+  }
+  @media screen and (max-width:470px) {
+    .content{
+        display: none;
+    }
+    .similar-videos-area{
+        display: none;
+    }
+    .player-wrapper{
+        padding-top: 62.25%;
+    }
+    .video-info{
+        height: 22rem;
+        font-size: 2.3rem;
+    }
+    .title{
+        width: 52rem;
+    }
+    .views{
+        display: block;
+    }
+    .action-icons{
+        margin-top: 1rem;
+        width: 52rem;
+        gap: 1rem;
+    }
+    .info{
+        width: 44rem;
+        font-size: 1.3rem;
+    }
+    .video-details{
+        padding-left: 2rem;
+    }
+  }
+

@@ -1,12 +1,8 @@
-import React from 'react'
+import React from "react";
 import "./avatar.css";
 
-function Avatar({img}) {
-  return (
-
-        <img className='avtar-pic' src={img} alt="logo"/>
-    
-  )
+function Avatar({ img }) {
+  return <img className="avtar-pic" src={img} alt="logo" />;
 }
 
-export default Avatar
+export default Avatar;
