@@ -16,8 +16,9 @@
   flex-wrap: wrap;
   gap: 3rem;
   overflow: auto;
+  scroll-behavior: smooth;
   /* height: 48.7rem; */
-  height: calc(100vh - 10.2rem);
+  height: calc(100vh - 11rem);
 }
 
 /* scroll bar */

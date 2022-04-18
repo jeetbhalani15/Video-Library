@@ -17,7 +17,7 @@ function Navbar() {
      {/* NAVBAR_LEFT_SECTION */}
               
       <div className="navbar--left">
-        <FiMenu size={20} />
+        <FiMenu size={30} />
         <div className="navbar--logo">
           <img className="logo-size" src={logo} alt="" srcset="" />
           <div className="bg-color">
@@ -32,8 +32,8 @@ function Navbar() {
       {/* NAVBAR_INPUT_SECTION */}
 
       <div className="navbar--input">
-        <input type="text" />
-        <button className="search-btn"><IoIosSearch size={18} /></button>
+        <input type="text" placeholder="Search.." />
+        <IoIosSearch className="search-btn" size={30} />
       </div>
 
       {/* NAVBAR_ICONS_SECTION */}
