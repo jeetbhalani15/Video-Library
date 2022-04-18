@@ -8,6 +8,7 @@
 .video-info-container{
     display: grid;
     grid-template-columns: 75% 25%;
+    margin-bottom: 2rem;
 }
 .video-info{
     height: 8rem;
