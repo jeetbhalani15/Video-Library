@@ -180,7 +180,7 @@ export const videos = [
       image: "https://i.ytimg.com/vi/FokmgJ3bIoM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD1-OlZpM7Q5GUTf7pNes6IdzZBUQ",
       channel: "BATTLEGROUNDS MOBILE INDIA ✔",
       views: "7.1M views",
-      timestamp: "streamed 5months ago",
+      timestamp: "5 months ago",
       category: "games",
       channelImage: "https://yt3.ggpht.com/fGvQjp1vAT1R4bAKTFLaSbdsfdYFDwAzVjeRVQeikH22bvHWsGULZdwIkpZXktcXZc5gFJuA3w=s88-c-k-c0x00ffffff-no-rj"
   },
@@ -192,7 +192,7 @@ export const videos = [
       image: "https://i.ytimg.com/vi/UORN-Z3c-nA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC_Ez1d7sHhnltsqAtcrSRDLLA8JQ",
       channel: "Mota Bhai",
       views: "27k views",
-      timestamp: "Streamed live on Jan 25, 2022",
+      timestamp: "Streamed Jan 25, 2022",
       category: "games",
       channelImage: "https://yt3.ggpht.com/CjPSODoUZyzD1lsh72vm_dKvNl2zXcIdGkpTxecySuT20U0d5Bn9lU1ZhoAu5YBWveLltGUF=s88-c-k-c0x00ffffff-no-rj"
   },
@@ -240,7 +240,7 @@ export const videos = [
       image: "https://i.ytimg.com/vi/Tc8kb5HBNrA/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLATonY37CPAYUcKOMumMUTydRkhTw",
       channel: "T-Series ✔",
       views: "39M views",
-      timestamp: "Premiered Mar 31, 2022",
+      timestamp: "Premiered Mar31 2022",
       category: "music",
       channelImage: "https://yt3.ggpht.com/DzaZaTX6gdgjjPI_vkNc2dPbI794UroI9fTAunua0fa7lukDj5NDkjfhS5-w2KXuvXS02r92=s88-c-k-c0x00ffffff-no-rj"
   },
@@ -264,7 +264,7 @@ export const videos = [
       image: "https://i.ytimg.com/vi/KfUExOXxU5Q/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDwgOgoG-gurqAiOyNT_dbQigWNog",
       channel: "Sony Music South",
       views: "161M views",
-      timestamp: "Mar 26, 2021",
+      timestamp: "Mar 26,2021",
       category: "music",
       channelImage: "https://yt3.ggpht.com/ytc/AKedOLRSu0SoelpGmqyAj7H-l9AvN_a4GiV145VwyF4yqA=s88-c-k-c0x00ffffff-no-rj"
   },

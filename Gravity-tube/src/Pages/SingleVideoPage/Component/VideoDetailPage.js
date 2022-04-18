@@ -23,7 +23,7 @@ function VideoDetailPage({}) {
   return (
     <div className="video-container">
       <div className="player-wrapper">
-      <ReactPlayer className="react-player" controls url={`https://www.youtube.com/watch?v=${videoId}`}/>
+      <ReactPlayer playing className="react-player" controls url={`https://www.youtube.com/watch?v=${videoId}`}/>
       </div>
        
       <div className="video-info-container">
