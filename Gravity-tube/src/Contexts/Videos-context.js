@@ -41,7 +41,7 @@ const watchLaterHandler = async (authState,video,videoDataDispatch) => {
       );
       console.log(res);
       videoDataDispatch({
-        type: "WATCH_LATER",
+        type: "ADD_TO_WATCH_LATER",
         payload: res.data.watchlater,
       });
     } catch (error) {
