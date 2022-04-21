@@ -7,7 +7,6 @@
 .videoCard{
     position: relative;
     margin-bottom: 2rem;
-    width: 15rem;
 }
 .videoCard:hover{
     cursor: pointer;
