@@ -11,7 +11,6 @@ const VideoProvider = ({ children }) => {
     FetchVideoReducer,
     initialValue
   );
-
   useEffect(() => {
     (async () => {
       try {
@@ -29,6 +28,7 @@ const VideoProvider = ({ children }) => {
   }, []);
 
 
+  
 //  ADD TO WATCH LATER USING API
 const watchLaterHandler = async (authState,video,videoDataDispatch) => {
   if (authState.token) {
