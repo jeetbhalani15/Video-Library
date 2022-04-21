@@ -4,10 +4,9 @@
 }
 
 .watch-later-box{
-    flex: 0.85;
     color: white;
     display: grid;
-    grid-template-columns: 28% 72%;
+    grid-template-columns: 30% 70%;
     border-left: 2px solid #454545;
 }
 .watch-later-info{
@@ -121,6 +120,22 @@ hr{
 
     }
 } */
+@media screen and (max-width:1310px) {
+    .sidebar-box {
+        flex: 0;
+    }
+    .sidebar-row {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .sidebar-title {
+        font-size: 12px;
+        margin-left: 0;
+    }
+    
+}
 @media screen and (max-width: 870px) {
     .content{
         width: fit-content;

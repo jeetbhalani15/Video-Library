@@ -104,27 +104,6 @@
     height: 100% !important;
   }
 
-
-  @media screen and (max-width:870px) {
-    .content{
-        width: 84rem;
-    }
-    .views{
-          gap: 10rem;
-      }
-      .info{
-          width: 50rem;
-      }
-  }
-
-  @media screen and (max-width:670px) {
-    .similar-video-card > img {
-        width: 14rem;
-    }
-    .content{
-        width: 83rem;
-    }
-  }
   @media screen and (max-width:470px) {
     .content{
         display: none;
