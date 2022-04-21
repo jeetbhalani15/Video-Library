@@ -4,7 +4,7 @@ import FetchVideoReducer from "../Reducers/FetchVideoReducer";
 
 const VideosContent = createContext();
 
-const initialValue = { videos: [] };
+const initialValue = { videos: [] , watchLater:[] };
 
 const VideoProvider = ({ children }) => {
   const [videoDataState, videoDataDispatch] = useReducer(
@@ -27,8 +27,60 @@ const VideoProvider = ({ children }) => {
       }
     })();
   }, []);
+
+
+//  ADD TO WATCH LATER USING API
+const watchLaterHandler = async (authState,video,videoDataDispatch) => {
+  if (authState.token) {
+    try {
+      console.log(video);
+      const res = await axios.post(
+        "/api/user/watchlater",
+        { video },
+        { headers: { authorization: authState.token } }
+      );
+      console.log(res);
+      videoDataDispatch({
+        type: "WATCH_LATER",
+        payload: res.data.watchlater,
+      });
+    } catch (error) {
+      alert(error);
+      console.log(error);
+    }
+  } else {
+    navigate("/login");
+  }
+};
+
+
+//  REMOVE FROM WATCH LATER USING API
+const removeFromWatchLater = async (authState,id,videoDataDispatch) => {
+  if (authState.token) {
+    try {
+      console.log(id);
+      const res = await axios.delete(
+        `/api/user/watchlater/${id}`,
+        { headers: { authorization: authState.token } }
+      );
+      console.log(res);
+      videoDataDispatch({
+        type: "REMOVE_FROM_WATCH_LATER",
+        payload: res.data.watchlater,
+      });
+    } catch (error) {
+      alert(error);
+      console.log(error);
+    }
+  } else {
+    navigate("/login");
+  }
+};
+
+
+
   return (
-    <VideosContent.Provider value={{ videoDataState, videoDataDispatch }}>
+    <VideosContent.Provider value={{ videoDataState, videoDataDispatch, watchLaterHandler, removeFromWatchLater }}>
       {children}
     </VideosContent.Provider>
   );

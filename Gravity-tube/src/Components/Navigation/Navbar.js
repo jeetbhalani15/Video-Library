@@ -39,9 +39,9 @@ function Navbar() {
       {/* NAVBAR_ICONS_SECTION */}
 
       <div className="navbar--icons">
-        <RiVideoAddFill size={20} />
+        {/* <RiVideoAddFill size={20} />
         <BsGrid3X3Gap size={20}/>
-        <IoIosNotifications size={20}/>
+        <IoIosNotifications size={20}/> */}
         <Link to="/login"><Avatar  img={avtarpic}/></Link>
       </div>
 
