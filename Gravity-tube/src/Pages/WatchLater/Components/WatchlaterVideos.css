@@ -92,7 +92,7 @@ hr{
     box-shadow: 0 1px 3px #0f0f0f;
 }
 
-@media screen and (max-width:1440px){
+/* @media screen and (max-width:1440px){
     .sidebar-box {
         flex: 0;
     }
@@ -120,7 +120,7 @@ hr{
         height: 10rem;
 
     }
-}
+} */
 @media screen and (max-width: 870px) {
     .content{
         width: fit-content;
