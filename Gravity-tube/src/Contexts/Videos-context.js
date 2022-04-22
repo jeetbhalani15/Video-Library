@@ -1,5 +1,6 @@
 import axios from "axios";
 import { createContext, useContext, useEffect, useReducer } from "react";
+import { useNavigate } from "react-router-dom";
 import FetchVideoReducer from "../Reducers/FetchVideoReducer";
 
 const VideosContent = createContext();
@@ -7,6 +8,7 @@ const VideosContent = createContext();
 const initialValue = { videos: [] , watchLater:[] };
 
 const VideoProvider = ({ children }) => {
+  const navigate = useNavigate();
   const [videoDataState, videoDataDispatch] = useReducer(
     FetchVideoReducer,
     initialValue

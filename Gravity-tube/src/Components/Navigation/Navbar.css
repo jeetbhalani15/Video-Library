@@ -50,12 +50,15 @@
     font-size: 1.1rem;
 }
 .navbar--icons{
+    margin-left: 10rem;
+    margin-right: 0.8rem;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 1.1rem;
 }
 .navbar{
+    position: relative;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -77,4 +80,43 @@
     padding: 0.5rem;
     height: 2.2rem;
     background-color: #253331;
+}
+
+.drop-down-menu{
+    position: absolute;
+    right: 1%;
+    top: 105%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #262727;
+    padding: .8rem;
+    flex-direction: column;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    box-shadow: 0 1px 2px #0f0f0f;
+}
+.menu-options{
+    padding: 0.5rem 0.6rem;
+    width: 12rem;
+}
+
+.menu-options> h3{
+  color:#00d0bc;
+}
+.menu-options> h3:hover{
+  transform: scale(1.05);
+}
+.menu-options> small{
+   color:#919090;
+}
+.logout-btn{
+    padding: 0.2rem 1rem;
+    background: none;
+    border: none;
+    color: #08cebc;
+    border: 1px solid #08cebc;
+}
+.logout-btn:hover{
+    transform: scale(1.05);
 }

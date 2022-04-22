@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import logo from "./logo.png";
 import { Login } from "./Pages/AuthWidget/Login/Login";
+import { Logout } from "./Pages/AuthWidget/Logout/Logout";
 import { SignUp } from "./Pages/AuthWidget/SignUp/SignUp";
 import HomePage from "./Pages/Homepage/HomePage";
 import SingleVideoPage from "./Pages/SingleVideoPage/SingleVideoPage";
@@ -15,6 +16,7 @@ function App() {
        <Route  path="/video/:videoId" element={<SingleVideoPage/>}/>
        <Route  path="/watchlater" element={<WatchLater/>}/>
        <Route  path="/login" element={<Login/>}/>
+       <Route  path="/logout" element={<Logout/>}/>
        <Route  path="/signup" element={<SignUp/>}/>
      </Routes>
      

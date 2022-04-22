@@ -148,6 +148,7 @@ export function SignUp() {
           password: formState.password,
         });
         localStorage.setItem("token", userData.data.encodedToken);
+        localStorage.setItem("user", JSON.stringify(userData.data.createdUser));
         authDispatch({ type: "SIGN_UP", payload: userData.data.encodedToken });
         navigate("/");
         toast.success(' User Sign Up Successfully!!', {

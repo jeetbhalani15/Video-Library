@@ -1,6 +1,7 @@
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import { FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { Footer } from "../../../Components/Footer/Footer";
-import { Navigation } from "../../../Components/Navigation/Navigation";
+import Navbar from "../../../Components/Navigation/Navbar";
 import { useAuth } from "../../../Contexts/Auth-context";
 import "./Logout.css";
 
@@ -8,22 +9,18 @@ import "./Logout.css";
 export function Logout() {
   const { authState, authDispatch } = useAuth();
   return (
-    <div className="big-wrapper dark">
-      <Navigation />
-
-      <main>
-        <div class="landing-box">
+    <>
+      <Navbar/>
+        <div class="logout-box">
           <section class="logout-container flex">
-            <i class="fa fa-check-circle"></i>
+            <FaCheckCircle color="green" size={35}/>
             <p class="logout-text">You have been logged out successfully!!</p>
             <Link to="/" class="return-btn" onClick={(authState.token = null)}>
               Back to Home
             </Link>
           </section>
         </div>
-      </main>
-
-      <Footer />
-    </div>
+      
+      </>
   );
 }

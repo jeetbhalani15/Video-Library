@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { IoMdMore } from "react-icons/io";
 import Avatar from "../Avatar/Avatar";
 import { Link, useNavigate } from "react-router-dom";
@@ -12,26 +12,7 @@ import { RiShareForwardLine } from "react-icons/ri";
 import { useAuth } from "../../Contexts/Auth-context";
 import axios from "axios";
 import { useVideoData } from "../../Contexts/Videos-context";
-
-const ClickOutsideHandler = (handler)=>{
-    let domNode = useRef();
- 
-    useEffect(()=>{
-      let clickOutside = (event)=> {
-        if(!domNode.current.contains(event.target)){
-         handler();
-       }
-      }
-
-      document.addEventListener("mousedown",clickOutside);
-      return()=>{
-        document.removeEventListener("mousedown",clickOutside);
-      };
-    })
-      return domNode;
-  }
-
-
+import { ClickOutsideHandler } from "./ClickOutsideHandler";
 
 function VideoCard({ video }) {
   const { authState } = useAuth();
