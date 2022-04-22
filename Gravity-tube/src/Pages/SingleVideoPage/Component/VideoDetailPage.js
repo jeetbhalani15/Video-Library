@@ -1,49 +1,84 @@
 import React, { useEffect, useState } from "react";
 import { AiOutlineDislike, AiOutlineLike } from "react-icons/ai";
-import { MdOutlineWatchLater } from "react-icons/md";
+import { MdOutlineAddTask, MdOutlineWatchLater } from "react-icons/md";
 import { RiPlayListAddFill } from "react-icons/ri";
 import img from "../../../Assets/Images/gt-logo.png";
 import Avatar from "../../../Components/Avatar/Avatar";
 import VideoCard from "../../../Components/VideoCard/VideoCard";
-import ReactPlayer from 'react-player/youtube'
+import ReactPlayer from "react-player/youtube";
 import "./VideoDetailPage.css";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useVideoData } from "../../../Contexts/Videos-context";
+import { useAuth } from "../../../Contexts/Auth-context";
 
 function VideoDetailPage({}) {
-  const {videoId} = useParams();
-  const {videoDataState} = useVideoData();
+  const { videoId } = useParams();
+  const { authState } = useAuth();
+  const { videoDataState, videoDataDispatch, watchLaterHandler } =
+    useVideoData();
   const [loading, setLoading] = useState(false);
- 
-    const currentVideo = videoDataState.videos.length !==0 && videoDataState.videos.find((item)=> item._id === videoId) 
-    console.log(currentVideo)
- 
+
+  const currentVideo =
+    videoDataState.videos.length !== 0 &&
+    videoDataState.videos.find((item) => item._id === videoId);
+  console.log(currentVideo);
 
   return (
     <div className="video-container">
       <div className="player-wrapper">
-      <ReactPlayer playing className="react-player" controls url={`https://www.youtube.com/watch?v=${videoId}`}/>
+        <ReactPlayer
+          playing
+          className="react-player"
+          controls
+          url={`https://www.youtube.com/watch?v=${videoId}`}
+        />
       </div>
-       
+
       <div className="video-info-container">
         <div className="video-details">
           <div className="video-info">
             <small className="hash-tags">#PCgames #Live #Music</small>
-            <div className="title">
-              {currentVideo.title}
-            </div>
+            <div className="title">{currentVideo.title}</div>
             <div className="views">
               {currentVideo.views} • {currentVideo.timestamp}
               <div className="action-icons">
-                <div className="action-btn"><AiOutlineLike size={28} />
-                <span>768</span></div>
-                <div className="action-btn"><AiOutlineDislike size={28} />
-                <span>Dislike</span></div>
-                <div className="action-btn"><RiPlayListAddFill size={28} />
-                <span>save</span></div>
-                <div className="action-btn"><MdOutlineWatchLater size={28} />
-                <span>Watch Later</span></div>
+                <div className="action-btn">
+                  <AiOutlineLike size={28} />
+                  <span>768</span>
+                </div>
+                <div className="action-btn">
+                  <AiOutlineDislike size={28} />
+                  <span>Dislike</span>
+                </div>
+                <div className="action-btn">
+                  <RiPlayListAddFill size={28} />
+                  <span>save</span>
+                </div>
+                <div
+                  onClick={() =>
+                    watchLaterHandler(
+                      authState,
+                      currentVideo,
+                      videoDataDispatch
+                    )
+                  }
+                  className="action-btn"
+                >
+                  {videoDataState.watchLater.find(
+                    (item) => item._id === currentVideo._id
+                  ) ? (<>
+                    <MdOutlineAddTask color="#00D4C1" size={25} />
+                    <span style={{color:"#00D4C1"}}>Watch Later</span>
+                    </>
+                  ) : (<>
+                  <MdOutlineWatchLater  size={25} />
+                  <span>Watch Later</span>
+                  </>
+
+                    )}
+                  
+                </div>
               </div>
             </div>
           </div>
@@ -53,9 +88,7 @@ function VideoDetailPage({}) {
               <div className="channel-name">
                 <h2>{currentVideo.channel}</h2>
                 <div className="info">
-                  <p>
-                   {currentVideo.description}
-                  </p>
+                  <p>{currentVideo.description}</p>
                 </div>
               </div>
             </div>
@@ -74,7 +107,7 @@ function VideoDetailPage({}) {
             <div className="similar-video-title">
               <h4>Badminton Deception | Most Unpredictable Shots in this...</h4>
               <div className="similar-video-title">
-                  Olympics
+                Olympics
                 <div>1.3M views • 1 month agp</div>
               </div>
             </div>
@@ -85,9 +118,11 @@ function VideoDetailPage({}) {
               alt="logo"
             />
             <div className="similar-video-title">
-              <h4>Marvel Studios' Doctor Strange in the Multiverse Official..</h4>
+              <h4>
+                Marvel Studios' Doctor Strange in the Multiverse Official..
+              </h4>
               <div className="similar-video-title">
-               Marvel Entertainment 
+                Marvel Entertainment
                 <div>47M views • 5 days ago</div>
               </div>
             </div>
@@ -100,7 +135,7 @@ function VideoDetailPage({}) {
             <div className="similar-video-title">
               <h4>THE LAUNCH PARTY [DAY 2] BATTLEGROUNDS MOBILE..</h4>
               <div className="similar-video-title">
-              BATTLEGROUNDS MOBILE INDIA ✔
+                BATTLEGROUNDS MOBILE INDIA ✔
                 <div>7.1M views • streamed 5months ago</div>
               </div>
             </div>
@@ -126,7 +161,7 @@ function VideoDetailPage({}) {
             <div className="similar-video-title">
               <h4>Baaki Baatein Peene Baad - Arjun Kanungo feat. Badshah |</h4>
               <div className="similar-video-title">
-                 Sony Music India
+                Sony Music India
                 <div>64M views • 6 year ago</div>
               </div>
             </div>
@@ -139,7 +174,7 @@ function VideoDetailPage({}) {
             <div className="similar-video-title">
               <h4>Far Cry 6 - Full Game Cinematic Playthrough - 4K RTX ON</h4>
               <div className="similar-video-title">
-               DraKulis Cinematic Gaming
+                DraKulis Cinematic Gaming
                 <div>855k views • 1 year ago</div>
               </div>
             </div>

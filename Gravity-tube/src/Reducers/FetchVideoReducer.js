@@ -4,6 +4,10 @@ function FetchVideoReducer(state,{type,payload}) {
     switch (type) {
         case "ON_SUCCESS":
             return {...state, videos: payload}
+        case "ADD_TO_WATCH_LATER":
+            return {...state, watchLater: payload}
+        case "REMOVE_FROM_WATCH_LATER":
+            return {...state, watchLater: payload}
             
             break;
     

@@ -1,6 +1,10 @@
 
 /* LOGOUT PAGE CSS */
 
+.logout-box{
+    background-color: #212121;
+    height: 100vh;
+}
 .logout-container {
     padding-top: 6rem;
     flex-direction: column;
@@ -16,7 +20,7 @@
 
 .logout-text {
     font-size: 2.5rem;
-    color: #bb831e;
+    color: #00D4C1;
     font-weight: 600;
 }
 .flex{

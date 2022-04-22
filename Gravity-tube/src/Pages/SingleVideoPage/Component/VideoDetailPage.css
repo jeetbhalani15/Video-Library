@@ -7,7 +7,7 @@
 }
 .video-info-container{
     display: grid;
-    grid-template-columns: 72% 28%;
+    grid-template-columns: 69% 30%;
     margin-bottom: 2rem;
 }
 .video-info{
@@ -38,15 +38,15 @@
 }
 .views{
     display: flex;
-    gap: 21rem;
+    gap: 15rem;
     margin-top: 0.8rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: darkgrey;
 }
 .action-icons{
     display: flex;
     align-items: center;
-    gap: 1.2rem;
+    gap: 1rem;
     color: white;
 }
 .action-btn{
@@ -67,7 +67,6 @@
 }
 .info{
     padding: 1rem;
-    width: 58rem;
 }
 .channel-name{
     margin-top: 0.3rem;
@@ -104,27 +103,46 @@
     height: 100% !important;
   }
 
-
-  @media screen and (max-width:870px) {
-    .content{
-        width: 84rem;
+  @media screen and (max-width: 860px) {
+    .video-info-container {
+        /* display: grid; */
+        /* grid-template-columns: 69% 30%; */
+        /* margin-bottom: 2rem; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8rem;
+        /* padding: 1rem; */
     }
-    .views{
-          gap: 10rem;
-      }
-      .info{
-          width: 50rem;
-      }
+    .video-info {
+        /* height: 8rem; */
+        color: white;
+        padding: 1rem;
+        font-size: 1.3rem;
+        border-bottom: 1px solid #555353;
+    }
+    .views {
+        display: flex;
+        grid-gap: 15rem;
+        gap: 9rem;
+        margin-top: 0.8rem;
+        font-size: 1.1rem;
+        color: darkgrey;
+    }
+      
+  }
+  @media screen and (max-width:760px) {
+    .views {
+        display: flex;
+        grid-gap: 15rem;
+        gap: 4rem;
+        margin-top: 0.8rem;
+        font-size: 1.1rem;
+        color: darkgrey;
+    }
   }
 
-  @media screen and (max-width:670px) {
-    .similar-video-card > img {
-        width: 14rem;
-    }
-    .content{
-        width: 83rem;
-    }
-  }
   @media screen and (max-width:470px) {
     .content{
         display: none;

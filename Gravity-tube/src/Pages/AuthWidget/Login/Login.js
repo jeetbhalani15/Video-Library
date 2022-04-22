@@ -52,6 +52,7 @@ export function Login() {
       });
       console.log(authState.token);
       localStorage.setItem("token", userData.data.encodedToken);
+      localStorage.setItem("user", JSON.stringify(userData.data.foundUser));
       authDispatch({ type: "LOG_IN", payload: userData.data.encodedToken });
       navigate("/");
       toast.success(' Logged In Successfully!!', {
