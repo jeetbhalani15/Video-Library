@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AiOutlineDislike, AiOutlineLike } from "react-icons/ai";
+import { AiFillLike, AiOutlineDislike, AiOutlineLike } from "react-icons/ai";
 import { MdOutlineAddTask, MdOutlineWatchLater } from "react-icons/md";
 import { RiPlayListAddFill } from "react-icons/ri";
 import img from "../../../Assets/Images/gt-logo.png";
@@ -15,8 +15,13 @@ import { useAuth } from "../../../Contexts/Auth-context";
 function VideoDetailPage({}) {
   const { videoId } = useParams();
   const { authState } = useAuth();
-  const { videoDataState, videoDataDispatch, watchLaterHandler } =
-    useVideoData();
+  const {
+    videoDataState,
+    videoDataDispatch,
+    watchLaterHandler,
+    likedVideoHandler,
+    removeFromLikedVideos
+  } = useVideoData();
   const [loading, setLoading] = useState(false);
 
   const currentVideo =
@@ -43,18 +48,48 @@ function VideoDetailPage({}) {
             <div className="views">
               {currentVideo.views} • {currentVideo.timestamp}
               <div className="action-icons">
-                <div className="action-btn">
-                  <AiOutlineLike size={28} />
-                  <span>768</span>
+
+
+                <div
+                  onClick={() =>
+                    likedVideoHandler(
+                      authState,
+                      currentVideo,
+                      videoDataDispatch
+                    )
+                  }
+                  className="action-btn"
+                >
+                  {videoDataState.likedVideos.find(
+                    (item) => item._id === currentVideo._id
+                  ) ? (
+                    <>
+                      <AiFillLike color="#00D4C1" size={28} />
+                      <span>768</span>
+                    </>
+                  ) : (
+                    <>
+                      <AiOutlineLike size={28} />
+                      <span>768</span>
+                    </>
+                  )}
                 </div>
-                <div className="action-btn">
+
+                
+                <div onClick={()=>removeFromLikedVideos(authState,currentVideo._id,videoDataDispatch)}
+                 className="action-btn">
                   <AiOutlineDislike size={28} />
                   <span>Dislike</span>
                 </div>
+                
+
+
                 <div className="action-btn">
                   <RiPlayListAddFill size={28} />
                   <span>save</span>
                 </div>
+
+
                 <div
                   onClick={() =>
                     watchLaterHandler(
@@ -67,18 +102,20 @@ function VideoDetailPage({}) {
                 >
                   {videoDataState.watchLater.find(
                     (item) => item._id === currentVideo._id
-                  ) ? (<>
-                    <MdOutlineAddTask color="#00D4C1" size={25} />
-                    <span style={{color:"#00D4C1"}}>Watch Later</span>
+                  ) ? (
+                    <>
+                      <MdOutlineAddTask color="#00D4C1" size={25} />
+                      <span style={{ color: "#00D4C1" }}>Watch Later</span>
                     </>
-                  ) : (<>
-                  <MdOutlineWatchLater  size={25} />
-                  <span>Watch Later</span>
-                  </>
-
-                    )}
-                  
+                  ) : (
+                    <>
+                      <MdOutlineWatchLater size={25} />
+                      <span>Watch Later</span>
+                    </>
+                  )}
                 </div>
+
+
               </div>
             </div>
           </div>
