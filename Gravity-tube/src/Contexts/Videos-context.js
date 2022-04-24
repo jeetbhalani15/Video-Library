@@ -5,7 +5,7 @@ import FetchVideoReducer from "../Reducers/FetchVideoReducer";
 
 const VideosContent = createContext();
 
-const initialValue = { videos: [] , watchLater:[] };
+const initialValue = { videos: [] , watchLater:[] , likedVideos:[] };
 
 const VideoProvider = ({ children }) => {
   const navigate = useNavigate();
@@ -80,9 +80,58 @@ const removeFromWatchLater = async (authState,id,videoDataDispatch) => {
 };
 
 
+// ADD TO LIKED VIDEOS
+const likedVideoHandler = async (authState,video,videoDataDispatch) => {
+  if (authState.token) {
+    try {
+      console.log(video);
+      const res = await axios.post(
+        "/api/user/likes",
+        { video },
+        { headers: { authorization: authState.token } }
+      );
+      console.log(res);
+      videoDataDispatch({
+        type: "ADD_TO_LIKED_VIDEOS",
+        payload: res.data.likes,
+      });
+    } catch (error) {
+      alert(error);
+      console.log(error);
+    }
+  } else {
+    navigate("/login");
+  }
+};
+
+
+//  REMOVE FROM LIKE VIDEOS USING API
+const removeFromLikedVideos = async (authState,id,videoDataDispatch) => {
+  if (authState.token) {
+    try {
+      console.log(id);
+      const res = await axios.delete(
+        `/api/user/likes/${id}`,
+        { headers: { authorization: authState.token } }
+      );
+      console.log(res);
+      videoDataDispatch({
+        type: "REMOVE_FROM_LIKED_VIDEOS",
+        payload: res.data.likes,
+      });
+      console.log("removed")
+    } catch (error) {
+      alert(error);
+      console.log(error);
+    }
+  } else {
+    navigate("/login");
+  }
+};
+
 
   return (
-    <VideosContent.Provider value={{ videoDataState, videoDataDispatch, watchLaterHandler, removeFromWatchLater }}>
+    <VideosContent.Provider value={{ videoDataState, videoDataDispatch, watchLaterHandler, removeFromWatchLater, likedVideoHandler, removeFromLikedVideos }}>
       {children}
     </VideosContent.Provider>
   );

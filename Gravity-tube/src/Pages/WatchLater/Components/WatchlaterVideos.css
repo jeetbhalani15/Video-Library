@@ -18,7 +18,7 @@
  width: fit-content;
  padding: 1rem;
  overflow: auto;
- height: 42.2rem;
+ height: 42.3rem;
 }
 .watchlater-img{
     width: 18rem;
@@ -90,6 +90,10 @@ hr{
     width: fit-content;
     box-shadow: 0 1px 3px #0f0f0f;
 }
+.list-num{
+    list-style: decimal;
+}
+
 
 /* @media screen and (max-width:1440px){
     .sidebar-box {

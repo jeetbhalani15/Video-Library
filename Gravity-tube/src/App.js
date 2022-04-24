@@ -5,6 +5,7 @@ import { Login } from "./Pages/AuthWidget/Login/Login";
 import { Logout } from "./Pages/AuthWidget/Logout/Logout";
 import { SignUp } from "./Pages/AuthWidget/SignUp/SignUp";
 import HomePage from "./Pages/Homepage/HomePage";
+import LikedVideos from "./Pages/LikedVideos/LikedVideos";
 import SingleVideoPage from "./Pages/SingleVideoPage/SingleVideoPage";
 import WatchLater from "./Pages/WatchLater/WatchLater";
 
@@ -15,6 +16,7 @@ function App() {
        <Route exact path="/" element={<HomePage/>}/>
        <Route  path="/video/:videoId" element={<SingleVideoPage/>}/>
        <Route  path="/watchlater" element={<WatchLater/>}/>
+       <Route  path="/likedvideos" element={<LikedVideos/>}/>
        <Route  path="/login" element={<Login/>}/>
        <Route  path="/logout" element={<Logout/>}/>
        <Route  path="/signup" element={<SignUp/>}/>

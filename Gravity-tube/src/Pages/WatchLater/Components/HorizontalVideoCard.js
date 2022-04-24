@@ -9,7 +9,7 @@ import { useVideoData } from '../../../Contexts/Videos-context';
 
 function HorizontalVideoCard({video}) {
     const{authState} = useAuth();
-    const {videoDataDispatch, removeFromWatchLater} = useVideoData();
+    const {videoDataDispatch, removeFromWatchLater, removeFromLikedVideos} = useVideoData();
     const [showOptions, setShowOptions] = useState(false);
 
     const toggleMoreOption = () => {
@@ -17,6 +17,7 @@ function HorizontalVideoCard({video}) {
     };
 
   return (
+    <>
     <div className="horizontal-video-card">
     <div className="grab-move">
         <VscGrabber color='grey' size={30}/>
@@ -31,6 +32,7 @@ function HorizontalVideoCard({video}) {
     <div className="horizontal-more-option">
         <IoMdMore onClick={() => toggleMoreOption()} size={25}/>
     </div>
+    
 
     {showOptions && (
             <div className="watchlater-option-box">
@@ -38,6 +40,12 @@ function HorizontalVideoCard({video}) {
                   <RiDeleteBin6Line size={25} />
                 <span onClick={()=>removeFromWatchLater(authState,video._id,videoDataDispatch)}>
                   Remove from Watch later
+                </span>
+              </div>
+              <div className="options">
+                  <RiDeleteBin6Line size={25} />
+                <span onClick={()=>removeFromLikedVideos(authState,video._id,videoDataDispatch)}>
+                  Remove from Liked Videos
                 </span>
               </div>
               {/* <div className="options">
@@ -51,9 +59,11 @@ function HorizontalVideoCard({video}) {
                 <span>Share</span>
               </div> */}
             </div>
-          )}
 
+)}
 </div>
+<hr/>
+</>
 
   )
 }

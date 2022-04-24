@@ -8,6 +8,10 @@ function FetchVideoReducer(state,{type,payload}) {
             return {...state, watchLater: payload}
         case "REMOVE_FROM_WATCH_LATER":
             return {...state, watchLater: payload}
+        case "ADD_TO_LIKED_VIDEOS":
+            return {...state, likedVideos: payload}
+        case "REMOVE_FROM_LIKED_VIDEOS":
+            return {...state, likedVideos: payload}
             
             break;
     
