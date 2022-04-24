@@ -15,7 +15,7 @@ function LikedVideosPage() {
         </div>
         <h1>Liked Videos</h1>
         <span className="watchlater-views">
-          {videoDataState.watchLater.length} Videos • 0 views • updated today
+          {videoDataState.likedVideos.length} Videos • 0 views • updated today
         </span>
         <div className="tag">
           <RiLock2Line color="grey" size={12} />

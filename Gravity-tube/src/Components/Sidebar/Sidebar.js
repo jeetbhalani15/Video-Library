@@ -20,7 +20,7 @@ function Sidebar() {
         <SidebarRow Icon={MdOutlineSubscriptions} title="Subscription"/>
         <hr/>
         <SidebarRow Icon={MdOutlineLibraryAdd} title="Library"/>
-        <SidebarRow Icon={RiHistoryFill} title="History"/>
+        <Link className='link' to ={'/history'}><SidebarRow Icon={RiHistoryFill} title="History"/></Link>
         <SidebarRow Icon={RiVideoFill} title="Your videos"/>
         <Link className='link' to={'/watchLater'}><SidebarRow Icon={MdWatchLater} title="Watch later"/></Link>
         <Link className='link' to={"/likedvideos"} ><SidebarRow Icon={AiFillLike} title="Liked videos"/></Link>

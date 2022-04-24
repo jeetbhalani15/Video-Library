@@ -5,7 +5,7 @@ import FetchVideoReducer from "../Reducers/FetchVideoReducer";
 
 const VideosContent = createContext();
 
-const initialValue = { videos: [] , watchLater:[] , likedVideos:[] };
+const initialValue = { videos: [] , watchLater:[] , likedVideos:[], history:[] };
 
 const VideoProvider = ({ children }) => {
   const navigate = useNavigate();
@@ -130,8 +130,34 @@ const removeFromLikedVideos = async (authState,id,videoDataDispatch) => {
 };
 
 
+// ADD TO VIDEOS HISTORY
+const videoHistoryHandler = async (authState,video,videoDataDispatch) => {
+  if (authState.token) {
+    try {
+      console.log(video);
+      const res = await axios.post(
+        "/api/user/history",
+        { video },
+        { headers: { authorization: authState.token } }
+      );
+      console.log(res);
+      videoDataDispatch({
+        type: "ADD_TO_HISTORY",
+        payload: res.data.history,
+      });
+    } catch (error) {
+      alert(error);
+      console.log(error);
+    }
+  } else {
+    navigate("/login");
+  }
+};
+
+
+
   return (
-    <VideosContent.Provider value={{ videoDataState, videoDataDispatch, watchLaterHandler, removeFromWatchLater, likedVideoHandler, removeFromLikedVideos }}>
+    <VideosContent.Provider value={{ videoDataState, videoDataDispatch, watchLaterHandler, removeFromWatchLater, likedVideoHandler, removeFromLikedVideos, videoHistoryHandler }}>
       {children}
     </VideosContent.Provider>
   );

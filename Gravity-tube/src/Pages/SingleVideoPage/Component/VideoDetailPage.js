@@ -20,14 +20,15 @@ function VideoDetailPage({}) {
     videoDataDispatch,
     watchLaterHandler,
     likedVideoHandler,
-    removeFromLikedVideos
+    removeFromLikedVideos,
+    videoHistoryHandler
   } = useVideoData();
   const [loading, setLoading] = useState(false);
 
-  const currentVideo =
-    videoDataState.videos.length !== 0 &&
+  const currentVideo = 
+    videoDataState.videos.length !== 0
+    &&
     videoDataState.videos.find((item) => item._id === videoId);
-  console.log(currentVideo);
 
   return (
     <div className="video-container">
@@ -36,7 +37,9 @@ function VideoDetailPage({}) {
           playing
           className="react-player"
           controls
+          onStart={()=>videoHistoryHandler(authState,currentVideo,videoDataDispatch)}
           url={`https://www.youtube.com/watch?v=${videoId}`}
+
         />
       </div>
 

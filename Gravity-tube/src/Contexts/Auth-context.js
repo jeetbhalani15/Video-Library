@@ -8,6 +8,7 @@ const AuthProvider = ({ children }) => {
   const [authState, authDispatch] = useReducer(AuthReducer, { token: null });
   const getToken = localStorage.getItem("token");
   const getUser = JSON.parse(localStorage.getItem("user")); 
+  console.log(getUser)
 
   useEffect (() => {
     authDispatch({type : "CHECK_TOKEN", payload : getToken });
