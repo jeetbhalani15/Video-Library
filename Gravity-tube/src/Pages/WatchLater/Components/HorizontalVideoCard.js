@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../../../Contexts/Auth-context';
 import { useVideoData } from '../../../Contexts/Videos-context';
 
-function HorizontalVideoCard({video}) {
+function HorizontalVideoCard({video, deleteHandler, from}) {
     const{authState} = useAuth();
     const {videoDataDispatch, removeFromWatchLater, removeFromLikedVideos} = useVideoData();
     const [showOptions, setShowOptions] = useState(false);
@@ -37,15 +37,9 @@ function HorizontalVideoCard({video}) {
     {showOptions && (
             <div className="watchlater-option-box">
               <div className="options">
-                  <RiDeleteBin6Line size={25} />
-                <span onClick={()=>removeFromWatchLater(authState,video._id,videoDataDispatch)}>
-                  Remove from Watch later
-                </span>
-              </div>
-              <div className="options">
-                  <RiDeleteBin6Line size={25} />
-                <span onClick={()=>removeFromLikedVideos(authState,video._id,videoDataDispatch)}>
-                  Remove from Liked Videos
+                  <RiDeleteBin6Line className='options-btn' size={25} />
+                <span onClick={()=>deleteHandler(authState,video._id,videoDataDispatch)}>
+                 { from ? " Remove from Liked Videos": "Remove from Watch later"}
                 </span>
               </div>
               {/* <div className="options">

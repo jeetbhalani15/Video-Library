@@ -12,11 +12,17 @@ function FetchVideoReducer(state,{type,payload}) {
             return {...state, likedVideos: payload}
         case "REMOVE_FROM_LIKED_VIDEOS":
             return {...state, likedVideos: payload}
+        case "ADD_TO_HISTORY":
+            return {...state, history: payload}
+        case "REMOVE_FROM_HISTORY":
+            return {...state, history: payload}
+        case "CLEAR_ALL_HISTORY":
+            return {...state, history: payload}
             
-            break;
-    
+            
+
         default:
-            break;
+            state;
     }
   
 }

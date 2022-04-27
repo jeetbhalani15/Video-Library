@@ -8,7 +8,7 @@ import HorizontalVideoCard from './HorizontalVideoCard'
 import "./WatchlaterVideos.css"
 
 function WatchLaterVideos() {
-    const {videoDataState} = useVideoData();
+    const {videoDataState,removeFromWatchLater} = useVideoData();
   return (
     <div className="watch-later-box">
         <div className="watch-later-info">
@@ -25,7 +25,7 @@ function WatchLaterVideos() {
         <div className="watch-later-videos">
         <div className="watchlater-video-box">
             {console.log(videoDataState.watchLater)}
-            {videoDataState.watchLater.map((video)=>(<HorizontalVideoCard video={video}/>))}
+            {videoDataState.watchLater.map((video)=>(<HorizontalVideoCard video={video} deleteHandler={removeFromWatchLater}/>))}
         
         </div>
         </div>

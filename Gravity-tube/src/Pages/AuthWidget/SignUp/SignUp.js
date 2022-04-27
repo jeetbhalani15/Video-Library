@@ -9,6 +9,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import logo from "../../../Assets/Images/logo4.png";
 import "./Signup.css";
+import Navbar from "../../../Components/Navigation/Navbar";
+import Sidebar from "../../../Components/Sidebar/Sidebar";
 
 export function SignUp() {
   const [error, setError] = useState("");
@@ -177,7 +179,10 @@ export function SignUp() {
   };
 
   return (
-    <div className="html">
+    <>
+    <Navbar />
+    <div className="body-content">
+      <Sidebar />
       <div className="background">
         <div className="login-box">
           <div className="login-content">
@@ -185,11 +190,6 @@ export function SignUp() {
               <div className="logo-mg">
                 <img className="logo" src={logo} alt="logo" />
               </div>
-              {/* <div className="bg-color">
-                ZERO
-                <div>GRAVITY</div>
-                <small className="small-txt">Store</small>
-              </div> */}
             </div>
             <span className="pd">Sign Up with Gravity Tube Account</span>
             <div className="login-credals">
@@ -381,7 +381,7 @@ export function SignUp() {
 
               <p className="text--center">
                 Already have an Account{" "}
-                <Link className="link" to="/Login">
+                <Link className="auth-link" to="/Login">
                   Login now
                 </Link>{" "}
               </p>
@@ -390,5 +390,6 @@ export function SignUp() {
         </div>
       </div>
     </div>
+    </>
   );
 }
