@@ -30,10 +30,10 @@ function Navbar() {
         <div className="navbar--logo">
           <img className="logo-size" src={logo} alt="" srcset="" />
           <div className="bg-color">
-            {/* <Link to="/"> */}
+            <Link to="/">
             <div className="logo-txt">GRAVITY</div>
             <small className="small-txt">Tube</small>
-            {/* </Link> */}
+            </Link>
           </div>
         </div>
       </div>

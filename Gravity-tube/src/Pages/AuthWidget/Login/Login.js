@@ -8,6 +8,8 @@ import { useAuth } from "../../../Contexts/Auth-context";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import logo from "../../../Assets/Images/logo4.png";
+import Navbar from "../../../Components/Navigation/Navbar";
+import Sidebar from "../../../Components/Sidebar/Sidebar";
 
 export function Login() {
   const { authState, authDispatch } = useAuth();
@@ -80,6 +82,10 @@ export function Login() {
     }
   };
   return (
+    <>
+    <Navbar />
+    <div className="body-content">
+      <Sidebar />
       <div className="background">
         <div className="login-box">
           <div className="login-content">
@@ -87,10 +93,6 @@ export function Login() {
               <div className="logo-mg">
                 <img className="logo" src={logo} alt="logo" />
               </div>
-              {/* <div className="bg-color">
-                <div>GRAVITY</div>
-                <small className="small-txt">Tube</small>
-              </div> */}
             </div>
             <span className="pd">Login with Gravity Tube Account</span>
             <div className="login-credals">
@@ -174,7 +176,7 @@ export function Login() {
              
               <p className="text--center">
                 Not a member?{" "}
-                <Link className="link" to="/SignUp">
+                <Link className="auth-link" to="/SignUp">
                   Sign up now
                 </Link>
               </p>
@@ -182,5 +184,7 @@ export function Login() {
           </div>
         </div>
       </div>
+      </div>
+  </>
   );
 }
