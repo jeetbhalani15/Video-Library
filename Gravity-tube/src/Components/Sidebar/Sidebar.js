@@ -1,7 +1,7 @@
 import React from 'react'
 import SidebarRow from './Component/SidebarRow/SidebarRow';
 import {TiHome} from "react-icons/ti";
-import {MdOutlineExplore} from "react-icons/md";
+import {MdOutlineExplore, MdPlaylistPlay} from "react-icons/md";
 import {MdOutlineSubscriptions} from "react-icons/md";
 import {MdOutlineLibraryAdd} from "react-icons/md";
 import {RiHistoryFill} from "react-icons/ri";
@@ -19,7 +19,7 @@ function Sidebar() {
         <SidebarRow Icon={MdOutlineExplore} title="Explore"/>
         <SidebarRow Icon={MdOutlineSubscriptions} title="Subscription"/>
         <hr/>
-        <SidebarRow Icon={MdOutlineLibraryAdd} title="Library"/>
+        <Link className='link' to={"/my-playlist"}><SidebarRow Icon={MdPlaylistPlay} title="Playlist"/></Link>
         <Link className='link' to ={'/history'}><SidebarRow Icon={RiHistoryFill} title="History"/></Link>
         <SidebarRow Icon={RiVideoFill} title="Your videos"/>
         <Link className='link' to={'/watchLater'}><SidebarRow Icon={MdWatchLater} title="Watch later"/></Link>

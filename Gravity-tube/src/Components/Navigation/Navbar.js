@@ -8,8 +8,8 @@ import logo from "../../Assets/Images/logo4.png";
 import "./Navbar.css";
 import Avatar from "../Avatar/Avatar";
 import { Link } from "react-router-dom";
-import { ClickOutsideHandler } from "../VideoCard/ClickOutsideHandler";
 import { useAuth } from "../../Contexts/Auth-context";
+import { useClickOutside } from "../../Hooks/useClickOutside";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -18,7 +18,7 @@ function Navbar() {
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
-  let domNode = ClickOutsideHandler(() => {
+  let domNode = useClickOutside(() => {
     setShowMenu(false);
   });
   return (
@@ -30,7 +30,7 @@ function Navbar() {
         <div className="navbar--logo">
           <img className="logo-size" src={logo} alt="" srcset="" />
           <div className="bg-color">
-            <Link to="/">
+            <Link className="link" to="/">
             <div className="logo-txt">GRAVITY</div>
             <small className="small-txt">Tube</small>
             </Link>

@@ -12,25 +12,36 @@ import { RiShareForwardLine } from "react-icons/ri";
 import { useAuth } from "../../Contexts/Auth-context";
 import axios from "axios";
 import { useVideoData } from "../../Contexts/Videos-context";
-import { ClickOutsideHandler } from "./ClickOutsideHandler";
+import Modal from "../Modal/Modal";
+import { useClickOutside } from "../../Hooks/useClickOutside";
+
 
 function VideoCard({ video }) {
   const { authState } = useAuth();
-  const { videoDataState,videoDataDispatch, watchLaterHandler } = useVideoData();
+  const { videoDataState,videoDataDispatch, watchLaterHandler} = useVideoData();
   const navigate = useNavigate();
   const [showOptions, setShowOptions] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  
 
   const toggleMoreOption = () => {
     setShowOptions(!showOptions);
   };
 
- let domNode = ClickOutsideHandler(()=>{
-    setShowOptions(false)
- })
-
-
+  const domRef = useClickOutside(() => {
+    setShowOptions(false);
+  });
+  const modalRef = useClickOutside(() => {
+    setShowModal(false);
+  });
+  const closeBtn = ()=>{
+    setShowModal(false)
+  }
+ 
   return (
+    <>
     <div className="videoCard" key={video._id}>
+    { showModal && <Modal modalRef={modalRef} setShowModal={setShowModal}  playlistVideo={video} />}
       <div>
         <Link to={`/video/${video._id}`}>
           <img className="card-image" src={video.image} alt="logo" />
@@ -55,8 +66,10 @@ function VideoCard({ video }) {
             </div>
           </div>
 
+
+
           {showOptions && (
-            <div ref={domNode} className="more-option-box">
+            <div ref={domRef} className="more-option-box">
               <div className="options">
               {videoDataState.watchLater.find((item)=>item._id === video._id) ? (
                   <MdOutlineAddTask color="#00D4C1" size={25} />
@@ -68,7 +81,7 @@ function VideoCard({ video }) {
                   Save to Watch later
                 </span>
               </div>
-              <div className="options">
+              <div onClick={()=>setShowModal(!showModal)} className="options">
                
                 <MdOutlinePlaylistAdd size={25} />
 
@@ -82,7 +95,11 @@ function VideoCard({ video }) {
           )}
         </div>
       </div>
+     
     </div>
+     
+     </>
+     
   );
 }
 

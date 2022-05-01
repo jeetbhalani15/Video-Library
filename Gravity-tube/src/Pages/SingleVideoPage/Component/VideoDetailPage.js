@@ -11,6 +11,9 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useVideoData } from "../../../Contexts/Videos-context";
 import { useAuth } from "../../../Contexts/Auth-context";
+import { usePlaylist } from "../../../Contexts/Playlist-context";
+import Modal from "../../../Components/Modal/Modal";
+import { useClickOutside } from "../../../Hooks/useClickOutside";
 
 function VideoDetailPage({}) {
   const { videoId } = useParams();
@@ -21,13 +24,23 @@ function VideoDetailPage({}) {
     watchLaterHandler,
     likedVideoHandler,
     removeFromLikedVideos,
-    videoHistoryHandler
+    videoHistoryHandler,
   } = useVideoData();
   const [loading, setLoading] = useState(false);
 
-  const currentVideo = 
-    videoDataState.videos.length !== 0
-    &&
+  const { playlistState } = usePlaylist();
+  const [showModal, setShowModal] = useState(false);
+
+  const modalRef = useClickOutside(() => {
+    setShowModal(false);
+  });
+
+  const addToPlaylist = () => {
+    setShowModal(true);
+  };
+
+  const currentVideo =
+    videoDataState.videos.length !== 0 &&
     videoDataState.videos.find((item) => item._id === videoId);
 
   return (
@@ -37,9 +50,10 @@ function VideoDetailPage({}) {
           playing
           className="react-player"
           controls
-          onStart={()=>videoHistoryHandler(authState,currentVideo,videoDataDispatch)}
+          onStart={() =>
+            videoHistoryHandler(authState, currentVideo, videoDataDispatch)
+          }
           url={`https://www.youtube.com/watch?v=${videoId}`}
-
         />
       </div>
 
@@ -51,8 +65,6 @@ function VideoDetailPage({}) {
             <div className="views">
               {currentVideo.views} • {currentVideo.timestamp}
               <div className="action-icons">
-
-
                 <div
                   onClick={() =>
                     likedVideoHandler(
@@ -78,20 +90,26 @@ function VideoDetailPage({}) {
                   )}
                 </div>
 
-                
-                <div onClick={()=>removeFromLikedVideos(authState,currentVideo._id,videoDataDispatch)}
-                 className="action-btn">
+                <div
+                  onClick={() =>
+                    removeFromLikedVideos(
+                      authState,
+                      currentVideo._id,
+                      videoDataDispatch
+                    )
+                  }
+                  className="action-btn"
+                >
                   <AiOutlineDislike size={28} />
                   <span>Dislike</span>
                 </div>
-                
 
-
-                <div className="action-btn">
-                  <RiPlayListAddFill size={28} />
-                  <span>save</span>
+                <div className="action-btn" onClick={() => addToPlaylist()}>
+                        <RiPlayListAddFill  size={28} />
+                        <span >save</span>
+                        {/* <RiPlayListAddFill color="#00D4C1" size={28} />
+                        <span style={{ color: "#00D4C1" }}>save</span> */}
                 </div>
-
 
                 <div
                   onClick={() =>
@@ -117,11 +135,16 @@ function VideoDetailPage({}) {
                     </>
                   )}
                 </div>
-
-
               </div>
             </div>
           </div>
+          {showModal && (
+            <Modal
+              modalRef={modalRef}
+              setShowModal={setShowModal}
+              playlistVideo={currentVideo}
+            />
+          )}
           <div className="channel-info">
             <div className="channel-logo">
               <Avatar className="avatar" img={currentVideo.channelImage} />

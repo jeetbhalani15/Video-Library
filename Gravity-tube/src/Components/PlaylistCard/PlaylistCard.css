@@ -1,0 +1,28 @@
+.playlist-card{
+    position: relative;
+}
+.playlist-img{
+    width: 13.9rem;
+    object-fit: contain;
+}
+.playlist-video-count{
+    right: 0%;
+    top: 0%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 8rem;
+    height: 7.9rem;
+    background-color: #000000cc;
+}
+.playlist-info{
+    margin-top: -2rem;
+    visibility: hidden;
+    color: #848484;
+}
+.playlist-card:hover > .playlist-info{
+    visibility: visible;
+}
+    

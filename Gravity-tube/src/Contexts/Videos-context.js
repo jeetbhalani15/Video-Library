@@ -1,5 +1,5 @@
 import axios from "axios";
-import { createContext, useContext, useEffect, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FetchVideoReducer from "../Reducers/FetchVideoReducer";
 
@@ -14,6 +14,7 @@ const initialValue = {
 
 const VideoProvider = ({ children }) => {
   const navigate = useNavigate();
+  const [showModal, setShowModal] = useState(false);
   const [videoDataState, videoDataDispatch] = useReducer(
     FetchVideoReducer,
     initialValue
@@ -208,7 +209,9 @@ const VideoProvider = ({ children }) => {
         removeFromLikedVideos,
         videoHistoryHandler,
         removeFromHistory,
-        clearAllHistory
+        clearAllHistory,
+        showModal,
+        setShowModal
       }}
     >
       {children}
