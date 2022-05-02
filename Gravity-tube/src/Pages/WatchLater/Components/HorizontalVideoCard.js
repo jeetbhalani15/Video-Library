@@ -17,9 +17,6 @@ function HorizontalVideoCard({ video, deleteHandler, from, playlistId }) {
   const { videoDataDispatch, removeFromWatchLater, removeFromLikedVideos } =
     useVideoData();
   const { playlistDispatch, playlistState } = usePlaylist();
-  // const {playlistState: playlists} = playlists;
-  // const {playlists: _id} = id;
-  // const id = playlistState.playlists._id
   const [showOptions, setShowOptions] = useState(false);
 
   const toggleMoreOption = () => {

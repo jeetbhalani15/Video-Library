@@ -35,25 +35,25 @@ function VideoPlaylist() {
     videos,
   } = playlist;
 
+
+
   // DELETE PLAYLIST HANDLER
   const deletePlaylist = async (authState, playlistId, playlistDispatch) => {
     try {
-      console.log("inside try");
-      console.log(playlistId);
       const res = await axios.delete(`/api/user/playlists/${playlistId}`, {
         headers: { authorization: authState.token },
       });
-
-      console.log(res);
       playlistDispatch({
         type: "REMOVE_PLAYLIST",
         payload: res.data.playlists,
       });
-      console.log("dleteed");
     } catch (error) {
       console.log(error);
     }
   };
+
+
+
 
   // DELETE PLAYLIST VIDEO HANDLER
   const removePlaylistVideo = async (
@@ -63,25 +63,21 @@ function VideoPlaylist() {
     playlistDispatch
   ) => {
     try {
-      console.log("inside try");
-      console.log(videoId);
-      console.log(playlist);
-      console.log(_id);
       const res = await axios.delete(`/api/user/playlists/${_id}/${videoId}`, {
         headers: { authorization: authState.token },
       });
 
-      console.log(res);
       playlistDispatch({
         type: "REMOVE_VIDEO_FROM_PLAYLIST",
         payload: res.data.playlist,
       });
-      console.log("dleteed");
     } catch (error) {
       console.log(error);
     }
   };
 
+
+  
   return (
     <div className="watch-later-box">
       <div className="watch-later-info">
