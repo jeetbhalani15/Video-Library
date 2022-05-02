@@ -18,11 +18,7 @@ function Modal({modalRef,playlistVideo, setShowModal}) {
 // POST PLAYLIST DATA HANDLER
 const postPlaylistData = async(e,authState,playlistDispatch,setPlaylistName,playlistName)=>{
   e.preventDefault();
-  console.log("in hello")
-  console.log(playlistName)
-  console.log(authState.token)
 if(authState.token){
-  console.log("in hello")
   try {
     const res = await axios.post('/api/user/playlists', {playlist : {title: playlistName}}, { headers: {authorization: authState.token}});
     console.log(res)
@@ -41,11 +37,7 @@ if(authState.token){
 const postVideoDataInPlaylist = async(authState, playlistId, playlistVideo, playlistDispatch)=>{
   if(authState.token){
     try {
-      console.log("in")
-      console.log(playlistId)
-      console.log(playlistVideo)
       const res = await axios.post(`/api/user/playlists/${playlistId}`, { video: playlistVideo }, { headers : {authorization: authState.token}});
-      console.log(res)
       if(res.status === 201){
         playlistDispatch({type:"ADD_VIDEO_DATA_IN_PLAYLIST", payload: res.data.playlist})
       }
@@ -60,11 +52,7 @@ const postVideoDataInPlaylist = async(authState, playlistId, playlistVideo, play
 const deleteVideoDataInPlaylist = async(authState, playlistId, playlistVideo, playlistDispatch)=>{
   if(authState.token){
     try {
-      console.log("in")
-      console.log(playlistId)
-      console.log(playlistVideo)
       const res = await axios.delete(`/api/user/playlists/${playlistId}/${playlistVideo._id}`, { headers : {authorization: authState.token}});
-      console.log(res)
       if(res.status === 201){
         playlistDispatch({type:"ADD_VIDEO_DATA_IN_PLAYLIST", payload: res.data.playlist})
       }
