@@ -10,25 +10,22 @@ import { useClickOutside } from "../../../Hooks/useClickOutside";
 import HorizontalVideoCard from "../../WatchLater/Components/HorizontalVideoCard";
 
 function VideoPlaylist() {
-  const {authState}=useAuth();
+  const { authState } = useAuth();
   const {
     playlistState: { playlists },
-    playlistDispatch
+    playlistDispatch,
   } = usePlaylist();
   const [playlistId, setPlaylistId] = useState("");
   const [playlistTitle, setPlaylistTitle] = useState("");
   const [showMenu, setShowMenu] = useState(false);
-  const {playlists:_id} = playlists
+
+  const { playlists: _id } = playlists;
+
   const checkId = (_id, title) => {
     setPlaylistId(_id);
     setPlaylistTitle(title);
   };
 
-  const menuRef = useClickOutside(()=>{
-    setShowMenu(false)
-  })
-
-  
   const playlist = playlists.reduce(
     (acc, item) => (item._id === playlistId ? item : acc),
     { title: "", videos: [], _id: "" }
@@ -37,19 +34,53 @@ function VideoPlaylist() {
     title: { title },
     videos,
   } = playlist;
-  6;
-  
-// DELETE PLAYLIST HANDLER
-const deletePlaylist = async(authState, _id, playlistDispatch)=>{
-  try {
-    const res = await axios.delete(`/api/user/playlists/${_id}`, { headers : { authorization : authState.token}});
-    playlistDispatch({type:"ADD_VIDEO_DATA_IN_PLAYLIST", payload: res.data.playlists})
-  } catch (error) {
-    console.log(error)
-  }
 
-}
+  // DELETE PLAYLIST HANDLER
+  const deletePlaylist = async (authState, playlistId, playlistDispatch) => {
+    try {
+      console.log("inside try");
+      console.log(playlistId);
+      const res = await axios.delete(`/api/user/playlists/${playlistId}`, {
+        headers: { authorization: authState.token },
+      });
 
+      console.log(res);
+      playlistDispatch({
+        type: "REMOVE_PLAYLIST",
+        payload: res.data.playlists,
+      });
+      console.log("dleteed");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // DELETE PLAYLIST VIDEO HANDLER
+  const removePlaylistVideo = async (
+    authState,
+    _id,
+    videoId,
+    playlistDispatch
+  ) => {
+    try {
+      console.log("inside try");
+      console.log(videoId);
+      console.log(playlist);
+      console.log(_id);
+      const res = await axios.delete(`/api/user/playlists/${_id}/${videoId}`, {
+        headers: { authorization: authState.token },
+      });
+
+      console.log(res);
+      playlistDispatch({
+        type: "REMOVE_VIDEO_FROM_PLAYLIST",
+        payload: res.data.playlist,
+      });
+      console.log("dleteed");
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="watch-later-box">
@@ -74,23 +105,22 @@ const deletePlaylist = async(authState, _id, playlistDispatch)=>{
                 onClick={() => checkId(item._id, item.title.title)}
               >
                 <PlaylistCard key={index} playlistItems={item} />
+
+                <span className="playlist-info">
+                  {item.title.title}
+                  <div
+                    className="delete-btn"
+                    onClick={() =>
+                      deletePlaylist(authState, item._id, playlistDispatch)
+                    }
+                  >
+                    <RiDeleteBin6Line className="menu-det-btn" size={20} />
+                  </div>
+                </span>
               </div>
-              <span className="playlist-info">
-                {item.title.title}{" "}
-                <IoMdMore onClick={() => setShowMenu(!showMenu)} size={25} />
-              </span>
             </>
           ))}
         </div>
-
-        {showMenu && (
-          <div ref={menuRef} className="menu-box">
-            <div onClick={()=>deletePlaylist(authState,playlistId,playlistDispatch)} className="menu-opt">
-              <RiDeleteBin6Line className="menu-det-btn" size={18} />
-              Delete Playlist
-            </div>
-          </div>
-        )}
       </div>
       <div className="watch-later-videos">
         <div className="watchlater-video-box">
@@ -101,7 +131,21 @@ const deletePlaylist = async(authState, _id, playlistDispatch)=>{
           {videos?.reverse().map((item) => {
             return (
               <>
-                <HorizontalVideoCard video={item} />
+                {videos.length === null ? (
+                    <div className="no-video-logo">
+                    <RiPlayList2Fill size={130} />
+                    <h1>Your playlist is empty</h1>
+                    <small>Add some videos to get started</small>
+                    </div>
+                 
+                 
+                ) : (
+                  <HorizontalVideoCard
+                  video={item}
+                  deleteHandler={removePlaylistVideo}
+                  playlistId={playlistId} />
+                 
+                )}
               </>
             );
           })}
@@ -112,3 +156,4 @@ const deletePlaylist = async(authState, _id, playlistDispatch)=>{
 }
 
 export default VideoPlaylist;
+

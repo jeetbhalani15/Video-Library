@@ -17,12 +17,4 @@
     height: 7.9rem;
     background-color: #000000cc;
 }
-.playlist-info{
-    margin-top: -2rem;
-    visibility: hidden;
-    color: #848484;
-}
-.playlist-card:hover > .playlist-info{
-    visibility: visible;
-}
-    
+

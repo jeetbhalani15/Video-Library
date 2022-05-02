@@ -123,7 +123,7 @@ hr{
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
     align-items: flex-start;
 }
 .playlist-info{
@@ -131,15 +131,15 @@ hr{
     display: flex;
     align-items: center;
     grid-gap: 2rem;
-    gap: 9.8rem;
+    gap: 11.8rem;
 }
-.playlist-card-area:hover{
+/* .playlist-card-area:hover{
     cursor: pointer;
 }
 .playlist-card-area:hover > .playlist-info {
     visibility: visible;
     cursor: pointer;
-}
+} */
 
 /* PLATLIST TAG */
 .playlist-tag{
@@ -155,26 +155,25 @@ hr{
 }
 
 /* PLAYLIST MENU OPTIONS  */
-.menu-opt{
-    position: absolute;
-    top: 83%;
-    left: 25%;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background-color: #3e3e3e8f;
-    width: fit-content;
-    padding: 0.6rem 0.8rem;
+.delete-btn{
+    visibility: hidden;
 }
-.menu-opt:hover{
-    cursor: pointer;
-    background-color: #262727;
-}
-.menu-opt:hover > .menu-det-btn{
-    cursor: pointer;
+.playlist-info:hover > .delete-btn{
+    visibility: visible;
     color: red;
-    background-color: #262727;
 }
+
+.no-video-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 18rem;
+    gap: 12px;
+    color: #ffffff54
+}
+
+
 
 /* @media screen and (max-width:1440px){
     .sidebar-box {
