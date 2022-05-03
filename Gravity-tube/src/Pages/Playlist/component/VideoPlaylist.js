@@ -7,6 +7,7 @@ import PlaylistCard from "../../../Components/PlaylistCard/PlaylistCard";
 import { useAuth } from "../../../Contexts/Auth-context";
 import { usePlaylist } from "../../../Contexts/Playlist-context";
 import { useClickOutside } from "../../../Hooks/useClickOutside";
+import { deletePlaylist, removePlaylistVideo } from "../../../Services/Playlist-services/PlaylistServices";
 import HorizontalVideoCard from "../../WatchLater/Components/HorizontalVideoCard";
 
 function VideoPlaylist() {
@@ -35,49 +36,6 @@ function VideoPlaylist() {
     videos,
   } = playlist;
 
-
-
-  // DELETE PLAYLIST HANDLER
-  const deletePlaylist = async (authState, playlistId, playlistDispatch) => {
-    try {
-      const res = await axios.delete(`/api/user/playlists/${playlistId}`, {
-        headers: { authorization: authState.token },
-      });
-      playlistDispatch({
-        type: "REMOVE_PLAYLIST",
-        payload: res.data.playlists,
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-
-
-
-  // DELETE PLAYLIST VIDEO HANDLER
-  const removePlaylistVideo = async (
-    authState,
-    _id,
-    videoId,
-    playlistDispatch
-  ) => {
-    try {
-      const res = await axios.delete(`/api/user/playlists/${_id}/${videoId}`, {
-        headers: { authorization: authState.token },
-      });
-
-      playlistDispatch({
-        type: "REMOVE_VIDEO_FROM_PLAYLIST",
-        payload: res.data.playlist,
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-
-  
   return (
     <div className="watch-later-box">
       <div className="watch-later-info">
