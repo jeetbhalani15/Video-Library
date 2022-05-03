@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { Navigate } from 'react-router-dom';
 
     // POST PLAYLIST DATA HANDLER
-    export const postPlaylistData = async(e,authState,playlistDispatch,setPlaylistName,playlistName)=>{
+    export const postPlaylistData = async(e,authState,playlistDispatch,setPlaylistName,playlistName,navigate)=>{
     e.preventDefault();
     if(authState.token){
     try {
@@ -15,6 +16,8 @@ import axios from 'axios';
     } catch (error) {
       console.log(error)
     }
+  } else {
+      navigate("/login")
   }
   }
 

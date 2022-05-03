@@ -4,6 +4,7 @@ import { Axios } from "axios";
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../Contexts/Auth-context";
 import { usePlaylist } from "../../Contexts/Playlist-context";
 import { useVideoData } from "../../Contexts/Videos-context";
@@ -15,6 +16,7 @@ function Modal({modalRef,playlistVideo, setShowModal}) {
   const { playlistState:{playlists}, playlistDispatch,} = usePlaylist();
   const [playlistName, setPlaylistName] = useState({title:""});
   const {_id: videoId} = playlistVideo;
+  const navigate = useNavigate();
   
 // POST VIDEO IN PLAYLIST ON CHECK USING API
 const deleteVideoDataInPlaylist = async(authState, playlistId, playlistVideo, playlistDispatch)=>{
@@ -49,7 +51,7 @@ const onCheckVideoHandler =(playlistId , videos,playlistVideo)=>{
     <div>
         <h1 className="playlist-header">Create New Playlist</h1> <IoClose onClick={()=>setShowModal(false)} className="close-btn" size={25}/>
       </div>
-      <form onSubmit = {(e)=>postPlaylistData(e,authState,playlistDispatch,setPlaylistName,playlistName)}>
+      <form onSubmit = {(e)=>postPlaylistData(e,authState,playlistDispatch,setPlaylistName,playlistName,navigate)}>
         <div className="playlist-text">
           <label>Playlist Name</label>
           <input
