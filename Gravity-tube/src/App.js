@@ -6,9 +6,11 @@ import { Logout } from "./Pages/AuthWidget/Logout/Logout";
 import { SignUp } from "./Pages/AuthWidget/SignUp/SignUp";
 import HomePage from "./Pages/Homepage/HomePage";
 import LikedVideos from "./Pages/LikedVideos/LikedVideos";
+import Playlist from "./Pages/Playlist/Playlist";
 import SingleVideoPage from "./Pages/SingleVideoPage/SingleVideoPage";
 import VideoHistory from "./Pages/VideoHistory/VideoHistory";
 import WatchLater from "./Pages/WatchLater/WatchLater";
+import Mockman from "mockman-js";
 
 function App() {
   return (
@@ -19,9 +21,11 @@ function App() {
        <Route  path="/watchlater" element={<WatchLater/>}/>
        <Route  path="/likedvideos" element={<LikedVideos/>}/>
        <Route  path="/history" element={<VideoHistory/>}/>
+       <Route  path="/my-playlist" element={<Playlist/>}/>
        <Route  path="/login" element={<Login/>}/>
        <Route  path="/logout" element={<Logout/>}/>
        <Route  path="/signup" element={<SignUp/>}/>
+       <Route  path="/mock" element={<Mockman/>}/>
      </Routes>
      
    </section>

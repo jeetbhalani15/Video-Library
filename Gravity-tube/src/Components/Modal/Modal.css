@@ -1,0 +1,74 @@
+/* playlist */
+
+.playlist-conatainer{
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 15;
+  top: 0%; 
+  left: -1%;
+  background-color: #000000cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .playlist-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #e3e3e3;
+    border-radius: 5px;
+  }
+  .close-btn{
+    position: absolute;
+    top: 11px;
+    right: 16px;
+    border: 2px solid #3b3b3b;
+
+  }
+  .close-btn:hover{
+    color: rgb(0, 0, 0);
+    border: 3px solid #009688;
+    background-color: #08ae9e4d;
+  }
+  .playlist-input{
+      margin-top: 8px;
+      padding: 0.4rem;
+      width: 18rem;
+      border: none;
+      background: transparent;
+      border: 2px solid #037c71;
+      border-radius: 5px;
+  }
+  .playlist-btn{
+    margin-top: 1rem;
+    padding: 0.5rem 6.5rem;
+    background-color: #009688;
+    border: none;
+    color: white;
+  }
+  .playlist-btn:hover{
+    cursor: pointer;
+   background-color: #02695f;;
+  }
+  .playlist-header{
+    color:#009688;
+  }
+  .playlist-text{
+    display: flex;
+    flex-direction: column;
+  }
+  .label-box{
+    display: grid;
+    grid-template-columns: 134px 127px;
+  }
+  .label-box > label{
+    color: #008387;
+    font-weight: 500;
+  }
+  .label-box > label > input{
+    margin-right: 6px;
+  }

@@ -12,6 +12,7 @@
     color: white;
 }
 .videos-container{
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -20,6 +21,7 @@
   /* height: 48.7rem; */
   height: calc(100vh - 10.5rem);
 }
+
 
 /* scroll bar */
 /* width */

@@ -118,6 +118,62 @@ hr{
     color: #f24545;
 }
 
+/* playlist card area div*/
+.playlist-card-area{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-start;
+}
+.playlist-info{
+    position: relative;
+    display: flex;
+    align-items: center;
+    grid-gap: 2rem;
+    gap: 11.8rem;
+}
+/* .playlist-card-area:hover{
+    cursor: pointer;
+}
+.playlist-card-area:hover > .playlist-info {
+    visibility: visible;
+    cursor: pointer;
+} */
+
+/* PLATLIST TAG */
+.playlist-tag{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    background-color: #0096886b;
+    /* border: 2px solid #0096888c; */
+    width: fit-content;
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+}
+
+/* PLAYLIST MENU OPTIONS  */
+.delete-btn{
+    visibility: hidden;
+}
+.playlist-info:hover > .delete-btn{
+    visibility: visible;
+    color: red;
+}
+
+.no-video-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 18rem;
+    gap: 12px;
+    color: #ffffff54
+}
+
+
 
 /* @media screen and (max-width:1440px){
     .sidebar-box {
