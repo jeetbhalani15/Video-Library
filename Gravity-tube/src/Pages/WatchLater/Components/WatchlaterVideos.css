@@ -133,6 +133,9 @@ hr{
     grid-gap: 2rem;
     gap: 11.8rem;
 }
+.playlist-card-area:hover{
+    cursor: pointer;
+}
 /* .playlist-card-area:hover{
     cursor: pointer;
 }

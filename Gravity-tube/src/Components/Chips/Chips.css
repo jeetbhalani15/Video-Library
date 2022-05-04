@@ -1,0 +1,30 @@
+.chips-box{
+    margin-top: -1.9rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+  .single-chip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #17bbac94; */
+    border: 2px solid #fdfdfd47;
+    padding: 0.rem 1rem;
+    padding: 8px 25px;
+    border-radius: 30px;
+    color: #fafafad6;
+    font-weight: 600;
+  }
+  .single-chip:hover {
+    cursor: pointer;
+   
+  }
+  .single-chip.active{
+    transition: 0.5s;
+    background-color: #0096885c;
+    border: 2px solid #009587;
+  }
+  

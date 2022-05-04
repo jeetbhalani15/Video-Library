@@ -37,7 +37,7 @@ const deleteVideoDataInPlaylist = async(authState, playlistId, playlistVideo, pl
 const onCheckVideoHandler =(playlistId , videos,playlistVideo)=>{
   videos?.find(item => item._id === videoId ) 
   ? (
-    deleteVideoDataInPlaylist(authState,playlistId,playlistVideo,playlistDispatch)
+    deleteVideoDataInPlaylist(authState,playlistId,undefined,playlistVideo,playlistDispatch)
   ) 
   : (
     postVideoDataInPlaylist(authState,playlistId,playlistVideo,playlistDispatch)
@@ -63,13 +63,12 @@ const onCheckVideoHandler =(playlistId , videos,playlistVideo)=>{
             value={playlistName.title}
           />
         </div>
-     { playlists?.map(({title:{title}, videos, _id: playlistId, isChecked})=>{
-       
+     { playlists?.map(({title:{title}, videos, _id: playlistId,})=>{
        return (
         <div key={playlistId} className="label-box">
         <label htmlFor={playlistId}>
             <input type="checkbox" id={playlistId} 
-            checked ={videos?.find((item=> item._id === videoId ? true : false))}
+            checked = {videos.find((item=> item._id === videoId)) ? true : false}
             onClick={()=>{onCheckVideoHandler(playlistId,videos,playlistVideo)}} />
             {title}
           </label>
