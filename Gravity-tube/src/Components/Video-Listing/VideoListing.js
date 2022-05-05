@@ -7,17 +7,24 @@ import "./VideoListing.css";
 
 function VideoListing() {
   const { videoDataState, showModal,setShowModal } = useVideoData();
-  const {filterState, filterDispatch} = useFilter();
-  const filteredDataByCategory = filterState.category === "All" ? (videoDataState.videos) : (videoDataState.videos.filter((item)=> item.category === filterState.category))
-  console.log(filteredDataByCategory)
-   
+  const {filterState, filterDispatch, search} = useFilter();
 
+
+  const filteredDataByCategory = filterState.category === "All" ? (videoDataState.videos) : (videoDataState.videos?.filter((item)=> item.category === filterState.category))
+
+  const SearchResult = filteredDataByCategory.filter((item) =>
+    item.title.toLowerCase().includes(search.toLowerCase().trim())
+    ||
+    item.channel.toLowerCase().includes(search.toLowerCase().trim())
+      
+  );
+   
   return (
     <div className="video-box">
        <Chips/>
       <h2>Recommended</h2>
       <div className="videos-container">
-        {filteredDataByCategory.map((video) => (
+        {SearchResult.map((video) => (
           <VideoCard livenow={true} video={video} />
         ))}
       </div>
