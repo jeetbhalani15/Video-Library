@@ -9,6 +9,7 @@ import { useAuth } from "../../Contexts/Auth-context";
 import { usePlaylist } from "../../Contexts/Playlist-context";
 import { useVideoData } from "../../Contexts/Videos-context";
 import { postPlaylistData, postVideoDataInPlaylist } from "../../Services/Playlist-services/PlaylistServices";
+import toast from "react-hot-toast";
 import "./Modal.css";
 
 function Modal({modalRef,playlistVideo, setShowModal}) {
@@ -17,6 +18,7 @@ function Modal({modalRef,playlistVideo, setShowModal}) {
   const [playlistName, setPlaylistName] = useState({title:""});
   const {_id: videoId} = playlistVideo;
   const navigate = useNavigate();
+  const {toastProp} = useVideoData();
   
 // POST VIDEO IN PLAYLIST ON CHECK USING API
 const deleteVideoDataInPlaylist = async(authState, playlistId, playlistVideo, playlistDispatch)=>{
@@ -25,9 +27,10 @@ const deleteVideoDataInPlaylist = async(authState, playlistId, playlistVideo, pl
       const res = await axios.delete(`/api/user/playlists/${playlistId}/${playlistVideo._id}`, { headers : {authorization: authState.token}});
       if(res.status === 201){
         playlistDispatch({type:"ADD_VIDEO_DATA_IN_PLAYLIST", payload: res.data.playlist})
+        toast.success('Video Removed',toastProp);
       }
     } catch (error) {
-      console.log(error)
+      toast.error('Something went wrong',toastProp);
     }
   }
 }
@@ -37,10 +40,10 @@ const deleteVideoDataInPlaylist = async(authState, playlistId, playlistVideo, pl
 const onCheckVideoHandler =(playlistId , videos,playlistVideo)=>{
   videos?.find(item => item._id === videoId ) 
   ? (
-    deleteVideoDataInPlaylist(authState,playlistId,undefined,playlistVideo,playlistDispatch)
+    deleteVideoDataInPlaylist(authState,playlistId,undefined,playlistVideo,playlistDispatch,toastProp)
   ) 
   : (
-    postVideoDataInPlaylist(authState,playlistId,playlistVideo,playlistDispatch)
+    postVideoDataInPlaylist(authState,playlistId,playlistVideo,playlistDispatch,toastProp)
     )
      
 }
@@ -51,7 +54,7 @@ const onCheckVideoHandler =(playlistId , videos,playlistVideo)=>{
     <div>
         <h1 className="playlist-header">Create New Playlist</h1> <IoClose onClick={()=>setShowModal(false)} className="close-btn" size={25}/>
       </div>
-      <form onSubmit = {(e)=>postPlaylistData(e,authState,playlistDispatch,setPlaylistName,playlistName,navigate)}>
+      <form onSubmit = {(e)=>postPlaylistData(e,authState,playlistDispatch,setPlaylistName,playlistName,navigate,toastProp)}>
         <div className="playlist-text">
           <label>Playlist Name</label>
           <input

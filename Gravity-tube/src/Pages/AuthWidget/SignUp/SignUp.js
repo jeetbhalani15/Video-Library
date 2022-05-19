@@ -5,16 +5,18 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router";
 import { InputPwd } from "../InputPwd";
 import { useAuth } from "../../../Contexts/Auth-context";
-import { ToastContainer, toast } from 'react-toastify';
+import toast from "react-hot-toast";
 import 'react-toastify/dist/ReactToastify.css';
 import logo from "../../../Assets/Images/logo4.png";
 import "./Signup.css";
 import Navbar from "../../../Components/Navigation/Navbar";
 import Sidebar from "../../../Components/Sidebar/Sidebar";
+import { useVideoData } from "../../../Contexts/Videos-context";
 
 export function SignUp() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const {toastProp} = useVideoData();
 
   const { authState, authDispatch } = useAuth();
 
@@ -153,27 +155,9 @@ export function SignUp() {
         localStorage.setItem("user", JSON.stringify(userData.data.createdUser));
         authDispatch({ type: "SIGN_UP", payload: userData.data.encodedToken });
         navigate("/");
-        toast.success(' User Sign Up Successfully!!', {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark"
-          });
+        toast.success('Signup Successfully',toastProp);
       } catch (err) {
-        toast.error(' Something went Wrong!!', {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
-          });
+        toast.error('Something went wrong',toastProp);
       }
     }
   };

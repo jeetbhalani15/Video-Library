@@ -5,14 +5,16 @@ import { useNavigate } from "react-router-dom";
 import { useReducer } from "react";
 import axios from "axios";
 import { useAuth } from "../../../Contexts/Auth-context";
-import { ToastContainer, toast } from "react-toastify";
+import toast from "react-hot-toast";
 import 'react-toastify/dist/ReactToastify.css';
 import logo from "../../../Assets/Images/logo4.png";
 import Navbar from "../../../Components/Navigation/Navbar";
 import Sidebar from "../../../Components/Sidebar/Sidebar";
+import { useVideoData } from "../../../Contexts/Videos-context";
 
 export function Login() {
   const { authState, authDispatch } = useAuth();
+  const {toastProp} = useVideoData();
 
   const navigate = useNavigate();
 
@@ -57,28 +59,9 @@ export function Login() {
       localStorage.setItem("user", JSON.stringify(userData.data.foundUser));
       authDispatch({ type: "LOG_IN", payload: userData.data.encodedToken });
       navigate("/");
-      toast.success(' Logged In Successfully!!', {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark"
-        });
+      toast.success('Login Successfully',toastProp);
     } catch (error) {
-      alert(error);
-      toast.error(' Something went Wrong!!', {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-        });
+      toast.error('Something went wrong',toastProp);
     }
   };
   return (

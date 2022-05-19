@@ -22,6 +22,7 @@ function VideoCard({ video }) {
   const navigate = useNavigate();
   const [showOptions, setShowOptions] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const {toastProp} = useVideoData();
   
 
   const toggleMoreOption = () => {
@@ -77,7 +78,7 @@ function VideoCard({ video }) {
                   <MdOutlineWatchLater size={25} />
                   
                 )}
-                <span onClick={() => watchLaterHandler(authState,video,videoDataDispatch)}>
+                <span onClick={() => watchLaterHandler(authState,video,videoDataDispatch,toastProp)}>
                   Save to Watch later
                 </span>
               </div>

@@ -1,8 +1,10 @@
 import axios from 'axios';
+import toast from 'react-hot-toast';
 import { Navigate } from 'react-router-dom';
+import { useVideoData } from '../../Contexts/Videos-context';
 
     // POST PLAYLIST DATA HANDLER
-    export const postPlaylistData = async(e,authState,playlistDispatch,setPlaylistName,playlistName,navigate)=>{
+    export const postPlaylistData = async(e,authState,playlistDispatch,setPlaylistName,playlistName,navigate,toastProp)=>{
     e.preventDefault();
     if(authState.token){
     try {
@@ -11,10 +13,11 @@ import { Navigate } from 'react-router-dom';
       if(res.status === 201){
         playlistDispatch({type:"SET_NEW_PLAYLIST",payload: res.data.playlists})
         setPlaylistName({title:""})
+        toast.success('Playlist Created successfully!',toastProp);
       }
     
     } catch (error) {
-      console.log(error)
+      toast.error('Something went wrong',toastProp);
     }
   } else {
       navigate("/login")
@@ -23,22 +26,23 @@ import { Navigate } from 'react-router-dom';
 
 
   // POST VIDEO IN PLAYLIST ON CHECK USING API
-     export const postVideoDataInPlaylist = async(authState, playlistId, playlistVideo, playlistDispatch)=>{ 
+     export const postVideoDataInPlaylist = async(authState, playlistId, playlistVideo, playlistDispatch,toastProp)=>{ 
      if(authState.token){
       try {
         const res = await axios.post(`/api/user/playlists/${playlistId}`, { video: playlistVideo }, { headers : {authorization: authState.token}});
         if(res.status === 201){
           playlistDispatch({type:"ADD_VIDEO_DATA_IN_PLAYLIST", payload: res.data.playlist})
+          toast.success('Video Added to playlist',toastProp);
         }
       } catch (error) {
-        console.log(error)
+        toast.error('Something went wrong',toastProp);
       }
     }
   }
   
 
     // DELETE PLAYLIST HANDLER
-    export const deletePlaylist = async (authState, playlistId, playlistDispatch) => {
+    export const deletePlaylist = async (authState, playlistId, playlistDispatch,toastProp) => {
         try {
           const res = await axios.delete(`/api/user/playlists/${playlistId}`, {
             headers: { authorization: authState.token },
@@ -47,14 +51,15 @@ import { Navigate } from 'react-router-dom';
             type: "REMOVE_PLAYLIST",
             payload: res.data.playlists,
           });
+          toast.success('Playlist Deleted',toastProp);
         } catch (error) {
-          console.log(error);
+          toast.error('Something went wrong',toastProp);
         }
       };
 
     
         // DELETE PLAYLIST VIDEO HANDLER
-        export const removePlaylistVideo = async (authState,_id,videoId, playlistDispatch) => {
+        export const removePlaylistVideo = async (authState,_id,videoId, playlistDispatch,toastProp) => {
             try {
             const res = await axios.delete(`/api/user/playlists/${_id}/${videoId}`, {
                 headers: { authorization: authState.token },
@@ -64,8 +69,9 @@ import { Navigate } from 'react-router-dom';
                 type: "REMOVE_VIDEO_FROM_PLAYLIST",
                 payload: res.data.playlist,
             });
+            toast.success('Video Removed From Playlist',toastProp);
             } catch (error) {
-            console.log(error);
+              toast.error('Something went wrong',toastProp);
             }
         };
   
