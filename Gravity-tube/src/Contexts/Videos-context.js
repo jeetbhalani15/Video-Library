@@ -10,6 +10,7 @@ const initialValue = {
   watchLater: [],
   likedVideos: [],
   history: [],
+  categories : [],
 };
 
 const VideoProvider = ({ children }) => {
@@ -29,6 +30,15 @@ const VideoProvider = ({ children }) => {
       } catch (error) {
         alert(error);
         console.log(err);
+      }
+
+      try {
+        const res = await axios.get("/api/categories");
+        if(res.status === 200) {
+          videoDataDispatch({type : "CATEGORIES_DATA", payload : res.data.categories});
+        }
+      } catch (error) {
+         alert(error);
       }
     })();
   }, []);

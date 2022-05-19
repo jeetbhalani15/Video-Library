@@ -7,7 +7,7 @@ import Avatar from "../../../Components/Avatar/Avatar";
 import VideoCard from "../../../Components/VideoCard/VideoCard";
 import ReactPlayer from "react-player/youtube";
 import "./VideoDetailPage.css";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { useVideoData } from "../../../Contexts/Videos-context";
 import { useAuth } from "../../../Contexts/Auth-context";
@@ -162,7 +162,7 @@ function VideoDetailPage({}) {
         </div>
         <div className="similar-videos-area">
           <h2>Must Watch</h2>
-          <div className="similar-video-card">
+          <Link to={`/video/${videoId}`}><div className="similar-video-card">
             <img
               src="https://i.ytimg.com/vi/GbQ8WKE6A9M/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDxaeNu_Qvu40rsQmeP4FTkI2i9vQ"
               alt="logo"
@@ -174,7 +174,7 @@ function VideoDetailPage({}) {
                 <div>1.3M views • 1 month agp</div>
               </div>
             </div>
-          </div>
+          </div></Link>
           <div className="similar-video-card">
             <img
               src="https://i.ytimg.com/vi/aWzlQ2N6qqg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAqEVUzcUs517Q228R5STiEXhP7xQ"

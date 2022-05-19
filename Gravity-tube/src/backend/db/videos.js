@@ -13,7 +13,7 @@ export const videos = [
       channel: "Shuttle Flash",
       views: "4.3M views",
       timestamp: "5 years ago",
-      category: "sports",
+      category: "Sports",
       channelImage: "https://yt3.ggpht.com/ytc/AKedOLRLPMxZUHIkss5G0_YtUwlzmwX2wT6SnqzQe9Cs5g=s68-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -25,7 +25,7 @@ export const videos = [
       channel: "Olympics",
       views: "1.3M views",
       timestamp: "1 month ago",
-      category: "sports",
+      category: "Sports",
       channelImage: "https://yt3.ggpht.com/ytc/AKedOLQKvNC0LcekfSvAjFEplaFuqVaqZKpvEinT7z0q=s68-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -37,7 +37,7 @@ export const videos = [
       channel: "Olympics",
       views: "1.3M views",
       timestamp: "1 month ago",
-      category: "sports",
+      category: "Sports",
       channelImage: "https://yt3.ggpht.com/ytc/AKedOLQKvNC0LcekfSvAjFEplaFuqVaqZKpvEinT7z0q=s68-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -49,7 +49,7 @@ export const videos = [
       channel: "Olympics",
       views: "1.3M views",
       timestamp: "1 month ago",
-      category: "sports",
+      category: "Sports",
       channelImage: "https://yt3.ggpht.com/ytc/AKedOLQKvNC0LcekfSvAjFEplaFuqVaqZKpvEinT7z0q=s68-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -61,7 +61,7 @@ export const videos = [
       channel: "ILoveBadminton",
       views: "65k views",
       timestamp: "11 month ago",
-      category: "sports",
+      category: "Sports",
       channelImage: "https://yt3.ggpht.com/ytc/AKedOLRvV2XrzwYGoOhp11GwkDtX_NvCkCWaGkNgDkIbQQ=s68-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -73,7 +73,7 @@ export const videos = [
       channel: "WION",
       views: "6.5k views",
       timestamp: "3 hours ago",
-      category: "news",
+      category: "Daily News",
       channelImage: "https://yt3.ggpht.com/ytc/AKedOLTjMUv7cELVis5Au9R2HRytJnMtLShdD_k4IaeFQA=s88-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -85,7 +85,7 @@ export const videos = [
       channel: "WION",
       views: "6.5k views",
       timestamp: "3 hours ago",
-      category: "news",
+      category: "Daily News",
       channelImage: "https://yt3.ggpht.com/ytc/AKedOLTjMUv7cELVis5Au9R2HRytJnMtLShdD_k4IaeFQA=s88-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -97,7 +97,7 @@ export const videos = [
       channel: "Oneindia News",
       views: "31k views",
       timestamp: "5 days ago",
-      category: "news",
+      category: "Daily News",
       channelImage: "https://yt3.ggpht.com/ytc/AKedOLTt1DCSI-pK04Oq6t-K5hdEPbUDBkqvSJgZ90XIyyQ=s88-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -109,7 +109,7 @@ export const videos = [
       channel: "TNIE Videos",
       views: "3k views",
       timestamp: "5 days ago",
-      category: "news",
+      category: "Daily News",
       channelImage: "https://yt3.ggpht.com/ytc/AKedOLSfTZi7wTwhQfVIDsyAMiIwuq0BSk0ZjQco2M0n=s88-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -121,7 +121,7 @@ export const videos = [
       channel: "Narendra Modi ✔",
       views: "26k views",
       timestamp: "2 days ago",
-      category: "news",
+      category: "Daily News",
       channelImage: "https://yt3.ggpht.com/fsjUoWZmI4g9r1OpAjdma75OLPSsj4xFnwzvwZ4ccoj_KY2wKh7RfFejqGXPOrNeW8QqQs_Q=s88-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -133,7 +133,7 @@ export const videos = [
       channel: "Movies Now",
       views: "26M views",
       timestamp: "5 months ago",
-      category: "movies",
+      category: "Movies",
       channelImage: "https://yt3.ggpht.com/ytc/AKedOLSUibXfhn_l3UrKxY4o9JT3A3FXwso6P4W8dyhZ=s68-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -145,7 +145,7 @@ export const videos = [
       channel: "Movies Now",
       views: "26M views",
       timestamp: "5 months ago",
-      category: "movies",
+      category: "Movies",
       channelImage: "https://yt3.ggpht.com/ytc/AKedOLSUibXfhn_l3UrKxY4o9JT3A3FXwso6P4W8dyhZ=s68-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -157,7 +157,7 @@ export const videos = [
       channel: "Marvel Entertainment ✔",
       views: "47M views",
       timestamp: "1 months ago",
-      category: "movies",
+      category: "Movies",
       channelImage: "https://yt3.ggpht.com/fGvQjp1vAT1R4bAKTFLaSbdsfdYFDwAzVjeRVQeikH22bvHWsGULZdwIkpZXktcXZc5gFJuA3w=s88-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -169,7 +169,7 @@ export const videos = [
       channel: "Marvel Entertainment",
       views: "47M views",
       timestamp: "1 months ago",
-      category: "movies",
+      category: "Movies",
       channelImage: "https://yt3.ggpht.com/fGvQjp1vAT1R4bAKTFLaSbdsfdYFDwAzVjeRVQeikH22bvHWsGULZdwIkpZXktcXZc5gFJuA3w=s88-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -181,7 +181,7 @@ export const videos = [
       channel: "BATTLEGROUNDS MOBILE INDIA ✔",
       views: "7.1M views",
       timestamp: "5 months ago",
-      category: "games",
+      category: "Gaming",
       channelImage: "https://yt3.ggpht.com/fGvQjp1vAT1R4bAKTFLaSbdsfdYFDwAzVjeRVQeikH22bvHWsGULZdwIkpZXktcXZc5gFJuA3w=s88-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -193,7 +193,7 @@ export const videos = [
       channel: "Mota Bhai",
       views: "27k views",
       timestamp: "Streamed Jan 25, 2022",
-      category: "games",
+      category: "Gaming",
       channelImage: "https://yt3.ggpht.com/CjPSODoUZyzD1lsh72vm_dKvNl2zXcIdGkpTxecySuT20U0d5Bn9lU1ZhoAu5YBWveLltGUF=s88-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -205,7 +205,7 @@ export const videos = [
       channel: "Mota Bhai",
       views: "21k views",
       timestamp: "Streamed 5 days ago",
-      category: "games",
+      category: "Gaming",
       channelImage: "https://yt3.ggpht.com/CjPSODoUZyzD1lsh72vm_dKvNl2zXcIdGkpTxecySuT20U0d5Bn9lU1ZhoAu5YBWveLltGUF=s88-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -217,7 +217,7 @@ export const videos = [
       channel: "Frostbite Gaming",
       views: "31M views",
       timestamp: " 1 year ago",
-      category: "games",
+      category: "Gaming",
       channelImage: "https://yt3.ggpht.com/ytc/AKedOLS_5YsWvly-lK1aKpdHiHlpOMiXw4LAItx6COuhMw=s68-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -229,7 +229,7 @@ export const videos = [
       channel: "DraKulis Cinematic Gaming",
       views: "855k views",
       timestamp: " 1 year ago",
-      category: "games",
+      category: "Gaming",
       channelImage: "https://yt3.ggpht.com/tpIz_gOdjODAa-7cgoWw_RuVtoQfF-yUmbBoPivZjyYkslMTAI7GbgITMRW4e4hVajvRhdI2=s88-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -241,7 +241,7 @@ export const videos = [
       channel: "T-Series ✔",
       views: "39M views",
       timestamp: "Premiered Mar31 2022",
-      category: "music",
+      category: "Music",
       channelImage: "https://yt3.ggpht.com/DzaZaTX6gdgjjPI_vkNc2dPbI794UroI9fTAunua0fa7lukDj5NDkjfhS5-w2KXuvXS02r92=s88-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -253,7 +253,7 @@ export const videos = [
       channel: "Coke Studio",
       views: "6.3M views",
       timestamp: "Mar 22, 2022",
-      category: "music",
+      category: "Music",
       channelImage: "https://yt3.ggpht.com/ytc/AKedOLTNtHgVmX114S4cnjoyFaDDJE6N1zNBwKgRNnYNAg=s88-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -265,7 +265,7 @@ export const videos = [
       channel: "Sony Music South",
       views: "161M views",
       timestamp: "Mar 26,2021",
-      category: "music",
+      category: "Music",
       channelImage: "https://yt3.ggpht.com/ytc/AKedOLRSu0SoelpGmqyAj7H-l9AvN_a4GiV145VwyF4yqA=s88-c-k-c0x00ffffff-no-rj"
   },
   {
@@ -277,7 +277,7 @@ export const videos = [
       channel: "Sony Music India",
       views: "64M views",
       timestamp: "6 year ago",
-      category: "music",
+      category: "Music",
       channelImage: "https://yt3.ggpht.com/ytc/AKedOLRSu0SoelpGmqyAj7H-l9AvN_a4GiV145VwyF4yqA=s88-c-k-c0x00ffffff-no-rj"
   },
 
