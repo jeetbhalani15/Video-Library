@@ -6,6 +6,7 @@ import HorizontalVideoCard from "../../WatchLater/Components/HorizontalVideoCard
 
 function VideoHistoryPage() {
   const { authState } = useAuth();
+  const {toastProp} = useVideoData()
   const {
     videoDataState,
     videoDataDispatch,
@@ -34,7 +35,7 @@ function VideoHistoryPage() {
           {console.log(videoDataState.watchLater)}
           {videoDataState.history.length > 0 ? (
             <button
-              onClick={() => clearAllHistory(authState, videoDataDispatch)}
+              onClick={() => clearAllHistory(authState, videoDataDispatch,toastProp)}
               className="clear-history-btn"
             >
               <RiDeleteBin6Line className="delete-icon" size={25} />

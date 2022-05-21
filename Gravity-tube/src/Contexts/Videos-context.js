@@ -1,7 +1,15 @@
 import axios from "axios";
-import { createContext, useContext, useEffect, useReducer, useState } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useReducer,
+  useState,
+} from "react";
 import { useNavigate } from "react-router-dom";
 import FetchVideoReducer from "../Reducers/FetchVideoReducer";
+import toast from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 
 const VideosContent = createContext();
 
@@ -10,7 +18,17 @@ const initialValue = {
   watchLater: [],
   likedVideos: [],
   history: [],
-  categories : [],
+  categories: [],
+};
+
+const toastProp = {
+  duration: 2000,
+  style: {
+    fontSize: "1.2rem",
+    borderRadius: "10px",
+    background: "#168baf",
+    color: "#fff",
+  },
 };
 
 const VideoProvider = ({ children }) => {
@@ -26,25 +44,34 @@ const VideoProvider = ({ children }) => {
         const res = await axios.get("/api/videos");
         if (res.status === 200) {
           videoDataDispatch({ type: "ON_SUCCESS", payload: res.data.videos });
+          toast.success("Welcome to Gravity tube", toastProp);
         }
       } catch (error) {
         alert(error);
-        console.log(err);
+        toast.error("Something went wrong", toastProp);
       }
 
       try {
         const res = await axios.get("/api/categories");
-        if(res.status === 200) {
-          videoDataDispatch({type : "CATEGORIES_DATA", payload : res.data.categories});
+        if (res.status === 200) {
+          videoDataDispatch({
+            type: "CATEGORIES_DATA",
+            payload: res.data.categories,
+          });
         }
       } catch (error) {
-         alert(error);
+        toast.error("Something went wrong", toastProp);
       }
     })();
   }, []);
 
   //  ADD TO WATCH LATER USING API
-  const watchLaterHandler = async (authState, video, videoDataDispatch) => {
+  const watchLaterHandler = async (
+    authState,
+    video,
+    videoDataDispatch,
+    toastProp
+  ) => {
     if (authState.token) {
       try {
         console.log(video);
@@ -53,14 +80,13 @@ const VideoProvider = ({ children }) => {
           { video },
           { headers: { authorization: authState.token } }
         );
-        console.log(res);
         videoDataDispatch({
           type: "ADD_TO_WATCH_LATER",
           payload: res.data.watchlater,
         });
+        toast.success("Saved to Watchlater videos!", toastProp);
       } catch (error) {
-        alert(error);
-        console.log(error);
+        toast.error("Something went wrong", toastProp);
       }
     } else {
       navigate("/login");
@@ -68,7 +94,12 @@ const VideoProvider = ({ children }) => {
   };
 
   //  REMOVE FROM WATCH LATER USING API
-  const removeFromWatchLater = async (authState, id, videoDataDispatch) => {
+  const removeFromWatchLater = async (
+    authState,
+    id,
+    videoDataDispatch,
+    toastProp
+  ) => {
     if (authState.token) {
       try {
         console.log(id);
@@ -80,9 +111,10 @@ const VideoProvider = ({ children }) => {
           type: "REMOVE_FROM_WATCH_LATER",
           payload: res.data.watchlater,
         });
+        toast.success("Removed from Watchlater videos!", toastProp);
       } catch (error) {
         alert(error);
-        console.log(error);
+        toast.error("Something went wrong", toastProp);
       }
     } else {
       navigate("/login");
@@ -90,7 +122,12 @@ const VideoProvider = ({ children }) => {
   };
 
   // ADD TO LIKED VIDEOS
-  const likedVideoHandler = async (authState, video, videoDataDispatch) => {
+  const likedVideoHandler = async (
+    authState,
+    video,
+    videoDataDispatch,
+    toastProp
+  ) => {
     if (authState.token) {
       try {
         console.log(video);
@@ -104,9 +141,9 @@ const VideoProvider = ({ children }) => {
           type: "ADD_TO_LIKED_VIDEOS",
           payload: res.data.likes,
         });
+        toast.success("Added to liked videos!", toastProp);
       } catch (error) {
-        alert(error);
-        console.log(error);
+        toast.error("Something went wrong", toastProp);
       }
     } else {
       navigate("/login");
@@ -114,7 +151,12 @@ const VideoProvider = ({ children }) => {
   };
 
   //  REMOVE FROM LIKE VIDEOS USING API
-  const removeFromLikedVideos = async (authState, id, videoDataDispatch) => {
+  const removeFromLikedVideos = async (
+    authState,
+    id,
+    videoDataDispatch,
+    toastProp
+  ) => {
     if (authState.token) {
       try {
         console.log(id);
@@ -126,10 +168,9 @@ const VideoProvider = ({ children }) => {
           type: "REMOVE_FROM_LIKED_VIDEOS",
           payload: res.data.likes,
         });
-        console.log("removed");
+        toast.success("Removed from liked videos!", toastProp);
       } catch (error) {
-        alert(error);
-        console.log(error);
+        toast.error("Something went wrong", toastProp);
       }
     } else {
       navigate("/login");
@@ -137,7 +178,12 @@ const VideoProvider = ({ children }) => {
   };
 
   // ADD TO VIDEOS HISTORY
-  const videoHistoryHandler = async (authState, video, videoDataDispatch) => {
+  const videoHistoryHandler = async (
+    authState,
+    video,
+    videoDataDispatch,
+    toastProp
+  ) => {
     if (authState.token) {
       try {
         console.log(video);
@@ -151,18 +197,22 @@ const VideoProvider = ({ children }) => {
           type: "ADD_TO_HISTORY",
           payload: res.data.history,
         });
+        toast.success("Added to video History!", toastProp);
       } catch (error) {
-        alert(error);
-        console.log(error);
+        toast.error("Something went wrong", toastProp);
       }
     } else {
       navigate("/login");
     }
   };
-  
 
   // REMOVE FROM HISTROY
-  const removeFromHistory = async (authState, id, videoDataDispatch) => {
+  const removeFromHistory = async (
+    authState,
+    id,
+    videoDataDispatch,
+    toastProp
+  ) => {
     if (authState.token) {
       try {
         console.log(id);
@@ -174,19 +224,17 @@ const VideoProvider = ({ children }) => {
           type: "REMOVE_FROM_HISTORY",
           payload: res.data.history,
         });
-        console.log("removed");
+        toast.success("Removed from video History!", toastProp);
       } catch (error) {
-        alert(error);
-        console.log(error);
+        toast.error("Something went wrong", toastProp);
       }
     } else {
       navigate("/login");
     }
   };
 
-
   // REMOVE ALL VIDEO FROM HISTROY
-  const clearAllHistory = async (authState,videoDataDispatch) => {
+  const clearAllHistory = async (authState, videoDataDispatch, toastProp) => {
     if (authState.token) {
       try {
         const res = await axios.delete(`/api/user/history/all`, {
@@ -196,17 +244,14 @@ const VideoProvider = ({ children }) => {
           type: "CLEAR_ALL_HISTORY",
           payload: res.data.history,
         });
+        toast.success("Removed All videos from History!", toastProp);
       } catch (error) {
-        alert(error);
-        console.log(error);
+        toast.error("Something went wrong", toastProp);
       }
     } else {
       navigate("/login");
     }
   };
-
-
-
 
   return (
     <VideosContent.Provider
@@ -221,10 +266,12 @@ const VideoProvider = ({ children }) => {
         removeFromHistory,
         clearAllHistory,
         showModal,
-        setShowModal
+        setShowModal,
+        toastProp,
       }}
     >
       {children}
+      <Toaster position="top-center" reverseOrder={true} />
     </VideosContent.Provider>
   );
 };

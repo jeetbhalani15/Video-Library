@@ -37,15 +37,18 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  /* background: #6bbab4; */
   background: #46706d;  
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  /* background: #46706d; */
   background: #6bbab4;
+}
+@media screen and (max-width: 860px) {
+  .chips-box{
+   gap: 1rem;
+  }
 }
 @media screen and (max-width: 1410px) {
   .videos-container {

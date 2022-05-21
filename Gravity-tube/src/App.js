@@ -11,6 +11,7 @@ import SingleVideoPage from "./Pages/SingleVideoPage/SingleVideoPage";
 import VideoHistory from "./Pages/VideoHistory/VideoHistory";
 import WatchLater from "./Pages/WatchLater/WatchLater";
 import Mockman from "mockman-js";
+import RequiresAuth from "./Pages/AuthWidget/RequiresAuth";
 
 function App() {
   return (
@@ -18,10 +19,10 @@ function App() {
      <Routes>
        <Route exact path="/" element={<HomePage/>}/>
        <Route  path="/video/:videoId" element={<SingleVideoPage/>}/>
-       <Route  path="/watchlater" element={<WatchLater/>}/>
-       <Route  path="/likedvideos" element={<LikedVideos/>}/>
-       <Route  path="/history" element={<VideoHistory/>}/>
-       <Route  path="/my-playlist" element={<Playlist/>}/>
+       <Route  path="/watchlater" element={<RequiresAuth><WatchLater/></RequiresAuth>}/>
+       <Route  path="/likedvideos" element={<RequiresAuth><LikedVideos/></RequiresAuth>}/>
+       <Route  path="/history" element={<RequiresAuth><VideoHistory/> </RequiresAuth>}/>
+       <Route  path="/my-playlist" element={<RequiresAuth><Playlist/></RequiresAuth>}/>
        <Route  path="/login" element={<Login/>}/>
        <Route  path="/logout" element={<Logout/>}/>
        <Route  path="/signup" element={<SignUp/>}/>

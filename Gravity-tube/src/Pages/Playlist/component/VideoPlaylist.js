@@ -6,8 +6,12 @@ import { RiDeleteBin6Line, RiLock2Line, RiPlayList2Fill } from "react-icons/ri";
 import PlaylistCard from "../../../Components/PlaylistCard/PlaylistCard";
 import { useAuth } from "../../../Contexts/Auth-context";
 import { usePlaylist } from "../../../Contexts/Playlist-context";
+import { useVideoData } from "../../../Contexts/Videos-context";
 import { useClickOutside } from "../../../Hooks/useClickOutside";
-import { deletePlaylist, removePlaylistVideo } from "../../../Services/Playlist-services/PlaylistServices";
+import {
+  deletePlaylist,
+  removePlaylistVideo,
+} from "../../../Services/Playlist-services/PlaylistServices";
 import HorizontalVideoCard from "../../WatchLater/Components/HorizontalVideoCard";
 
 function VideoPlaylist() {
@@ -19,6 +23,7 @@ function VideoPlaylist() {
   const [playlistId, setPlaylistId] = useState("");
   const [playlistTitle, setPlaylistTitle] = useState("");
   const [showMenu, setShowMenu] = useState(false);
+  const { toastProp } = useVideoData();
 
   const { playlists: _id } = playlists;
 
@@ -65,7 +70,12 @@ function VideoPlaylist() {
                   <div
                     className="delete-btn"
                     onClick={() =>
-                      deletePlaylist(authState, item._id, playlistDispatch)
+                      deletePlaylist(
+                        authState,
+                        item._id,
+                        playlistDispatch,
+                        toastProp
+                      )
                     }
                   >
                     <RiDeleteBin6Line className="menu-det-btn" size={20} />
@@ -86,19 +96,17 @@ function VideoPlaylist() {
             return (
               <>
                 {videos.length === null ? (
-                    <div className="no-video-logo">
+                  <div className="no-video-logo">
                     <RiPlayList2Fill size={130} />
                     <h1>Your playlist is empty</h1>
                     <small>Add some videos to get started</small>
-                    </div>
-                 
-                 
+                  </div>
                 ) : (
                   <HorizontalVideoCard
-                  video={item}
-                  deleteHandler={removePlaylistVideo}
-                  playlistId={playlistId} />
-                 
+                    video={item}
+                    deleteHandler={removePlaylistVideo}
+                    playlistId={playlistId}
+                  />
                 )}
               </>
             );
@@ -110,4 +118,3 @@ function VideoPlaylist() {
 }
 
 export default VideoPlaylist;
-

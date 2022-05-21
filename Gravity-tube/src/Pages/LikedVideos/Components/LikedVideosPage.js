@@ -6,7 +6,7 @@ import { useVideoData } from "../../../Contexts/Videos-context";
 import HorizontalVideoCard from "../../WatchLater/Components/HorizontalVideoCard";
 
 function LikedVideosPage() {
-  const { videoDataState,removeFromLikedVideos} = useVideoData();
+  const { videoDataState, removeFromLikedVideos } = useVideoData();
   return (
     <div className="watch-later-box">
       <div className="watch-later-info">
@@ -27,9 +27,14 @@ function LikedVideosPage() {
         <div className="watchlater-video-box">
           {console.log(videoDataState.watchLater)}
           {videoDataState.likedVideos.map((video) => (
-              <>
-           <li className="list-num"></li> <HorizontalVideoCard video={video} deleteHandler={removeFromLikedVideos} from={true} />
-           </>
+            <>
+              <li className="list-num"></li>{" "}
+              <HorizontalVideoCard
+                video={video}
+                deleteHandler={removeFromLikedVideos}
+                from={true}
+              />
+            </>
           ))}
         </div>
       </div>

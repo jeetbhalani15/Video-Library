@@ -15,12 +15,12 @@ import { useFilter } from "../../Contexts/Filter-context";
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const { authState, getUser } = useAuth();
-  const {filterDispatch, search, setSearch} = useFilter();
+  const { filterDispatch, search, setSearch } = useFilter();
 
-  const searchHandler = (e)=>{
+  const searchHandler = (e) => {
     setSearch(e.target.value);
-    filterDispatch({type:"CLEAR_FILTER", payload:'All'});
-  }
+    filterDispatch({ type: "CLEAR_FILTER", payload: "All" });
+  };
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -28,7 +28,6 @@ function Navbar() {
   let domNode = useClickOutside(() => {
     setShowMenu(false);
   });
-
 
   return (
     <div className="navbar">
@@ -40,8 +39,8 @@ function Navbar() {
           <img className="logo-size" src={logo} alt="" srcset="" />
           <div className="bg-color">
             <Link className="link" to="/">
-            <div className="logo-txt">GRAVITY</div>
-            <small className="small-txt">Tube</small>
+              <div className="logo-txt">GRAVITY</div>
+              <small className="small-txt">Tube</small>
             </Link>
           </div>
         </div>
@@ -50,16 +49,17 @@ function Navbar() {
       {/* NAVBAR_INPUT_SECTION */}
 
       <div className="navbar--input">
-        <input type="text" placeholder="Search.." onChange={(e)=>searchHandler(e)} />
+        <input
+          type="text"
+          placeholder="Search.."
+          onChange={(e) => searchHandler(e)}
+        />
         <IoIosSearch className="search-btn" size={30} />
       </div>
 
       {/* NAVBAR_ICONS_SECTION */}
 
       <div onClick={() => toggleMenu()} className="navbar--icons">
-        {/* <RiVideoAddFill size={20} />
-        <BsGrid3X3Gap size={20}/>
-        <IoIosNotifications size={20}/> */}
         <Avatar img={avtarpic} />
       </div>
 

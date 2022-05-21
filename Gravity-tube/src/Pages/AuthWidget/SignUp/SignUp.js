@@ -5,16 +5,18 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router";
 import { InputPwd } from "../InputPwd";
 import { useAuth } from "../../../Contexts/Auth-context";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import toast from "react-hot-toast";
+import "react-toastify/dist/ReactToastify.css";
 import logo from "../../../Assets/Images/logo4.png";
 import "./Signup.css";
 import Navbar from "../../../Components/Navigation/Navbar";
 import Sidebar from "../../../Components/Sidebar/Sidebar";
+import { useVideoData } from "../../../Contexts/Videos-context";
 
 export function SignUp() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const { toastProp } = useVideoData();
 
   const { authState, authDispatch } = useAuth();
 
@@ -153,243 +155,226 @@ export function SignUp() {
         localStorage.setItem("user", JSON.stringify(userData.data.createdUser));
         authDispatch({ type: "SIGN_UP", payload: userData.data.encodedToken });
         navigate("/");
-        toast.success(' User Sign Up Successfully!!', {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark"
-          });
+        toast.success("Signup Successfully", toastProp);
       } catch (err) {
-        toast.error(' Something went Wrong!!', {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
-          });
+        toast.error("Something went wrong", toastProp);
       }
     }
   };
 
   return (
     <>
-    <Navbar />
-    <div className="body-content">
-      <Sidebar />
-      <div className="background">
-        <div className="login-box">
-          <div className="login-content">
-            <div className="auth-logo">
-              <div className="logo-mg">
-                <img className="logo" src={logo} alt="logo" />
+      <Navbar />
+      <div className="body-content">
+        <Sidebar />
+        <div className="background">
+          <div className="login-box">
+            <div className="login-content">
+              <div className="auth-logo">
+                <div className="logo-mg">
+                  <img className="logo" src={logo} alt="logo" />
+                </div>
               </div>
-            </div>
-            <span className="pd">Sign Up with Gravity Tube Account</span>
-            <div className="login-credals">
-              <form action="#" method="#" className="form login">
-                <div className="form__field">
-                  <label className="auth-label" htmlFor="login__username">
-                    <span className="auth-icon">
-                      <i className="fa fa-user"></i>
+              <span className="pd">Sign Up with Gravity Tube Account</span>
+              <div className="login-credals">
+                <form action="#" method="#" className="form login">
+                  <div className="form__field">
+                    <label className="auth-label" htmlFor="login__username">
+                      <span className="auth-icon">
+                        <i className="fa fa-user"></i>
+                      </span>
+                      <span className="hidden">First name</span>
+                    </label>
+                    <input
+                      className="form__input log-in-input"
+                      id="login__username"
+                      placeholder="First name"
+                      name="username"
+                      type="text"
+                      value={formState.firstName}
+                      onChange={(e) => {
+                        formDispatch({
+                          type: "SET_FIRST_NAME",
+                          payload: e.target.value,
+                        });
+                      }}
+                      onFocus={() => {
+                        onFocusCleanErr("SHOW_FIRST_N_ERROR");
+                      }}
+                      required
+                    />
+                  </div>
+                  <div
+                    className="form-err"
+                    style={{
+                      display: fieldErrors.firstNameError ? "block" : "none",
+                    }}
+                  >
+                    <span className="form-err-icon">
+                      <i className="fa fa-exclamation-circle"></i>
                     </span>
-                    <span className="hidden">First name</span>
-                  </label>
-                  <input
-                    className="form__input log-in-input"
-                    id="login__username"
-                    placeholder="First name"
-                    name="username"
-                    type="text"
-                    value={formState.firstName}
-                    onChange={(e) => {
-                      formDispatch({
-                        type: "SET_FIRST_NAME",
-                        payload: e.target.value,
-                      });
-                    }}
-                    onFocus={() => {
-                      onFocusCleanErr("SHOW_FIRST_N_ERROR");
-                    }}
-                    required
-                  />
-                </div>
-                <div
-                  className="form-err"
-                  style={{
-                    display: fieldErrors.firstNameError ? "block" : "none",
-                  }}
-                >
-                  <span className="form-err-icon">
-                    <i className="fa fa-exclamation-circle"></i>
-                  </span>
-                  {fieldErrors.firstNameError}
-                </div>
+                    {fieldErrors.firstNameError}
+                  </div>
 
-                <div className="form__field">
-                  <label className="auth-label" htmlFor="login__username">
-                    <span className="auth-icon">
-                      <i className="fa fa-user"></i>
+                  <div className="form__field">
+                    <label className="auth-label" htmlFor="login__username">
+                      <span className="auth-icon">
+                        <i className="fa fa-user"></i>
+                      </span>
+                      <span className="hidden">Last name</span>
+                    </label>
+                    <input
+                      className="form__input log-in-input"
+                      id="login__username"
+                      placeholder="Last name"
+                      name="username"
+                      type="text"
+                      value={formState.lastName}
+                      onChange={(e) => {
+                        formDispatch({
+                          type: "SET_LAST_NAME",
+                          payload: e.target.value,
+                        });
+                      }}
+                      onFocus={() => {
+                        onFocusCleanErr("SHOW_LAST_N_ERROR");
+                      }}
+                      required
+                    />
+                  </div>
+                  <div
+                    className="form-err"
+                    style={{
+                      display: fieldErrors.lastNameError ? "block" : "none",
+                    }}
+                  >
+                    <span className="form-err-icon">
+                      <i className="fa fa-exclamation-circle"></i>
                     </span>
-                    <span className="hidden">Last name</span>
-                  </label>
-                  <input
-                    className="form__input log-in-input"
-                    id="login__username"
-                    placeholder="Last name"
-                    name="username"
-                    type="text"
-                    value={formState.lastName}
-                    onChange={(e) => {
-                      formDispatch({
-                        type: "SET_LAST_NAME",
-                        payload: e.target.value,
-                      });
-                    }}
-                    onFocus={() => {
-                      onFocusCleanErr("SHOW_LAST_N_ERROR");
-                    }}
-                    required
-                  />
-                </div>
-                <div
-                  className="form-err"
-                  style={{
-                    display: fieldErrors.lastNameError ? "block" : "none",
-                  }}
-                >
-                  <span className="form-err-icon">
-                    <i className="fa fa-exclamation-circle"></i>
-                  </span>
-                  {fieldErrors.lastNameError}
-                </div>
+                    {fieldErrors.lastNameError}
+                  </div>
 
-                <div className="form__field">
-                  <label className="auth-label" htmlFor="login__username">
-                    <span className="auth-icon">
-                      <i className="fa fa-envelope"></i>
+                  <div className="form__field">
+                    <label className="auth-label" htmlFor="login__username">
+                      <span className="auth-icon">
+                        <i className="fa fa-envelope"></i>
+                      </span>
+                      <span className="hidden">Email address</span>
+                    </label>
+                    <input
+                      className="form__input log-in-input"
+                      id="login__username"
+                      placeholder="Email id"
+                      name="username"
+                      type="text"
+                      value={formState.email}
+                      onChange={(e) => {
+                        formDispatch({
+                          type: "SET_EMAIL",
+                          payload: e.target.value,
+                        });
+                      }}
+                      onFocus={() => {
+                        onFocusCleanErr("SHOW_EMAIL_ERROR");
+                      }}
+                      required
+                    />
+                  </div>
+                  <div
+                    className="form-err"
+                    style={{
+                      display: fieldErrors.emailError ? "block" : "none",
+                    }}
+                  >
+                    <span className="form-err-icon">
+                      <i className="fa fa-exclamation-circle"></i>
                     </span>
-                    <span className="hidden">Email address</span>
-                  </label>
-                  <input
-                    className="form__input log-in-input"
-                    id="login__username"
-                    placeholder="Email id"
-                    name="username"
-                    type="text"
-                    value={formState.email}
-                    onChange={(e) => {
-                      formDispatch({
-                        type: "SET_EMAIL",
-                        payload: e.target.value,
-                      });
-                    }}
-                    onFocus={() => {
-                      onFocusCleanErr("SHOW_EMAIL_ERROR");
-                    }}
-                    required
-                  />
-                </div>
-                <div
-                  className="form-err"
-                  style={{ display: fieldErrors.emailError ? "block" : "none" }}
-                >
-                  <span className="form-err-icon">
-                    <i className="fa fa-exclamation-circle"></i>
-                  </span>
-                  {fieldErrors.emailError}
-                </div>
+                    {fieldErrors.emailError}
+                  </div>
 
-                <div className="form__field">
-                  <label className="auth-label" htmlFor="login__password">
-                    <span className="auth-icon">
-                      <i className="fa fa-lock"></i>
+                  <div className="form__field">
+                    <label className="auth-label" htmlFor="login__password">
+                      <span className="auth-icon">
+                        <i className="fa fa-lock"></i>
+                      </span>
+                      <span className="hidden">Password</span>
+                    </label>
+
+                    <InputPwd
+                      placeholderTxt={"Password"}
+                      value={formState.password}
+                      onChangeHandler={(e) => {
+                        formDispatch({
+                          type: "SET_PASSWORD",
+                          payload: e.target.value,
+                        });
+                      }}
+                      onFocushandler={() => {
+                        onFocusCleanErr("SHOW_PWD_ERROR");
+                      }}
+                    />
+                  </div>
+                  <div
+                    className="form-err"
+                    style={{ display: fieldErrors.pwdError ? "block" : "none" }}
+                  >
+                    <span className="form-err-icon">
+                      <i className="fa fa-exclamation-circle"></i>
                     </span>
-                    <span className="hidden">Password</span>
-                  </label>
-  
-                  <InputPwd 
-                    placeholderTxt={"Password"}
-                    value={formState.password}
-                    onChangeHandler={(e) => {
-                      formDispatch({
-                        type: "SET_PASSWORD",
-                        payload: e.target.value,
-                      });
-                    }}
-                    onFocushandler={() => {
-                      onFocusCleanErr("SHOW_PWD_ERROR");
-                    }}
-                  />
-                  
-                </div>
-                <div
-                  className="form-err"
-                  style={{ display: fieldErrors.pwdError ? "block" : "none" }}
-                >
-                  <span className="form-err-icon">
-                    <i className="fa fa-exclamation-circle"></i>
-                  </span>
-                  {fieldErrors.pwdError}
-                </div>
+                    {fieldErrors.pwdError}
+                  </div>
 
-                <div className="form__field">
-                  <label className="auth-label" htmlFor="login__password">
-                    <span className="auth-icon">
-                      <i className="fa fa-lock"></i>
+                  <div className="form__field">
+                    <label className="auth-label" htmlFor="login__password">
+                      <span className="auth-icon">
+                        <i className="fa fa-lock"></i>
+                      </span>
+                      <span className="hidden">Confirm password</span>
+                    </label>
+                    <InputPwd
+                      placeholderTxt={"Confirm password"}
+                      value={formState.ConfirmPassword}
+                      onChangeHandler={(e) => {
+                        formDispatch({
+                          type: "SET_CONFIRM_PWD",
+                          payload: e.target.value,
+                        });
+                      }}
+                      onFocushandler={() => {
+                        onFocusCleanErr("SHOW_CONFIRM_PWD_ERROR");
+                      }}
+                    />
+                  </div>
+                  <div
+                    className="form-err"
+                    style={{
+                      display: fieldErrors.confirmPwdError ? "block" : "none",
+                    }}
+                  >
+                    <span className="form-err-icon">
+                      <i className="fa fa-exclamation-circle"></i>
                     </span>
-                    <span className="hidden">Confirm password</span>
-                  </label>
-                  <InputPwd
-                    placeholderTxt={"Confirm password"}
-                    value={formState.ConfirmPassword}
-                    onChangeHandler={(e) => {
-                      formDispatch({
-                        type: "SET_CONFIRM_PWD",
-                        payload: e.target.value,
-                      });
-                    }}
-                    onFocushandler={() => {
-                      onFocusCleanErr("SHOW_CONFIRM_PWD_ERROR");
-                    }}
-                  />
-                </div>
-                <div
-                  className="form-err"
-                  style={{
-                    display: fieldErrors.confirmPwdError ? "block" : "none",
-                  }}
-                >
-                  <span className="form-err-icon">
-                    <i className="fa fa-exclamation-circle"></i>
-                  </span>
-                  {fieldErrors.confirmPwdError}
-                </div>
+                    {fieldErrors.confirmPwdError}
+                  </div>
 
-                <div className="form__field">
-                  <button className="auth-signup-btn" onClick={signupHandler}>
-                    CREAT A ACCOUNT
-                  </button>
-                </div>
-              </form>
+                  <div className="form__field">
+                    <button className="auth-signup-btn" onClick={signupHandler}>
+                      CREAT A ACCOUNT
+                    </button>
+                  </div>
+                </form>
 
-              <p className="text--center">
-                Already have an Account{" "}
-                <Link className="auth-link" to="/Login">
-                  Login now
-                </Link>{" "}
-              </p>
+                <p className="text--center">
+                  Already have an Account{" "}
+                  <Link className="auth-link" to="/Login">
+                    Login now
+                  </Link>{" "}
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </>
   );
 }

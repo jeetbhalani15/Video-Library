@@ -19,10 +19,6 @@
     font-weight: 600;
     color: #00d4c1;
     font-size: 1.1rem;
-    /* background-color: #d00b0b;; */
-    /* padding: .3rem; */
-    /* font-size: 11px; */
-    /* border-radius: 7px; */
 }
 .logo-txt{
     font-weight: 700;
@@ -35,7 +31,6 @@
 .navbar--input{
     display: flex;
     align-items: center;
-    /* border: 1px solid grey; */
     width: 35%;
     margin-right: 10rem;
     border: 1px solid #616161;
