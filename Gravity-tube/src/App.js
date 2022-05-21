@@ -12,6 +12,7 @@ import VideoHistory from "./Pages/VideoHistory/VideoHistory";
 import WatchLater from "./Pages/WatchLater/WatchLater";
 import Mockman from "mockman-js";
 import RequiresAuth from "./Pages/AuthWidget/RequiresAuth";
+import Page404 from "./Pages/Page404/Page404";
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
        <Route  path="/logout" element={<Logout/>}/>
        <Route  path="/signup" element={<SignUp/>}/>
        <Route  path="/mock" element={<Mockman/>}/>
+
+       <Route  path="*" element={<Page404/>}/>
+
      </Routes>
      
    </section>
