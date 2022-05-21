@@ -1,6 +1,7 @@
 .chips-box{
     margin-top: -1.9rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 2rem;
     justify-content: flex-start;
@@ -10,7 +11,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: #17bbac94; */
     border: 2px solid #fdfdfd47;
     padding: 0.rem 1rem;
     padding: 8px 20px;

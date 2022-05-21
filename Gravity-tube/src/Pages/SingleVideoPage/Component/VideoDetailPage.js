@@ -105,10 +105,8 @@ function VideoDetailPage({}) {
                 </div>
 
                 <div className="action-btn" onClick={() => addToPlaylist()}>
-                        <RiPlayListAddFill  size={28} />
-                        <span >save</span>
-                        {/* <RiPlayListAddFill color="#00D4C1" size={28} />
-                        <span style={{ color: "#00D4C1" }}>save</span> */}
+                  <RiPlayListAddFill size={28} />
+                  <span>save</span>
                 </div>
 
                 <div
@@ -162,19 +160,23 @@ function VideoDetailPage({}) {
         </div>
         <div className="similar-videos-area">
           <h2>Must Watch</h2>
-          <Link to={`/video/${videoId}`}><div className="similar-video-card">
-            <img
-              src="https://i.ytimg.com/vi/GbQ8WKE6A9M/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDxaeNu_Qvu40rsQmeP4FTkI2i9vQ"
-              alt="logo"
-            />
-            <div className="similar-video-title">
-              <h4>Badminton Deception | Most Unpredictable Shots in this...</h4>
+          <Link to={`/video/${videoId}`}>
+            <div className="similar-video-card">
+              <img
+                src="https://i.ytimg.com/vi/GbQ8WKE6A9M/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDxaeNu_Qvu40rsQmeP4FTkI2i9vQ"
+                alt="logo"
+              />
               <div className="similar-video-title">
-                Olympics
-                <div>1.3M views • 1 month agp</div>
+                <h4>
+                  Badminton Deception | Most Unpredictable Shots in this...
+                </h4>
+                <div className="similar-video-title">
+                  Olympics
+                  <div>1.3M views • 1 month agp</div>
+                </div>
               </div>
             </div>
-          </div></Link>
+          </Link>
           <div className="similar-video-card">
             <img
               src="https://i.ytimg.com/vi/aWzlQ2N6qqg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAqEVUzcUs517Q228R5STiEXhP7xQ"
