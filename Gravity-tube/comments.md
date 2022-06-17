@@ -1,4 +1,4 @@
-## polishing project for roc8
+## Polishing Project For Roc8
 
 1. Add title & favivcon 
 2. Added seprate component for suggestion video card  & its working.
