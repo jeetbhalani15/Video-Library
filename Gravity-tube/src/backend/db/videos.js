@@ -4,6 +4,68 @@
  * */
 
 export const videos = [
+  {suggestedVideos:[{
+    _id: "GbQ8WKE6A9M",
+    title: "Badminton Deception | Most Unpredictable Shots in this...",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+      image: "https://i.ytimg.com/vi/GbQ8WKE6A9M/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDxaeNu_Qvu40rsQmeP4FTkI2i9vQ",
+      channel: "Olympics",
+      views: "1.3M views",
+      timestamp: "1 month ago",
+      category: "Sports",
+      channelImage: "https://yt3.ggpht.com/ytc/AKedOLQKvNC0LcekfSvAjFEplaFuqVaqZKpvEinT7z0q=s68-c-k-c0x00ffffff-no-rj"
+  },
+  {
+    _id: "aWzlQ2N6qqg",
+    title: "Marvel Studios' Doctor Strange in the Multiverse Official..",
+    description:
+      "Enter a new dimension of Strange. Watch the official trailer for Marvel Studios' Doctor Strange in the Multiverse of Madness. Only in theaters May 6.",
+      image: "https://i.ytimg.com/vi/aWzlQ2N6qqg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAqEVUzcUs517Q228R5STiEXhP7xQ",
+      channel: "Marvel Entertainment ✔",
+      views: "47M views",
+      timestamp: "1 months ago",
+      category: "Movies",
+      channelImage: "https://yt3.ggpht.com/fGvQjp1vAT1R4bAKTFLaSbdsfdYFDwAzVjeRVQeikH22bvHWsGULZdwIkpZXktcXZc5gFJuA3w=s88-c-k-c0x00ffffff-no-rj"
+  },
+  {
+    _id: "FokmgJ3bIoM",
+    title: "THE LAUNCH PARTY [DAY 2] BATTLEGROUNDS MOBILE..",
+    description:
+      "Enjoyed Day 1? Day 2 is going to be even more exciting! Your favorite streamers are pumped up to take the party to the next level and kick-start the celebrations! ",
+      image: "https://i.ytimg.com/vi/FokmgJ3bIoM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD1-OlZpM7Q5GUTf7pNes6IdzZBUQ",
+      channel: "BATTLEGROUNDS MOBILE INDIA ✔",
+      views: "7.1M views",
+      timestamp: "5 months ago",
+      category: "Gaming",
+      channelImage: "https://yt3.ggpht.com/fGvQjp1vAT1R4bAKTFLaSbdsfdYFDwAzVjeRVQeikH22bvHWsGULZdwIkpZXktcXZc5gFJuA3w=s88-c-k-c0x00ffffff-no-rj"
+  },
+  {
+    _id: "eWjGh61Gacg",
+    title: "Baaki Baatein Peene Baad - Arjun Kanungo feat. Badshah | ",
+    description:
+    "India’s newest Pop Music heartthrob #ArjunKanungo releases his debut single “Baaki Baatein Peene Baad” featuring the Rap superstar, Badshah ! With lyrics by Mayur Puri – the lyricist of Bollywood chartbusters like Selfie Le Le Re, ABDC 2 and Happy New Year, and rap by Badshah of   ",
+      image: "https://i.ytimg.com/vi/eWjGh61Gacg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDzgOnlA3uwi9uST_l_gwiTiGONUA",
+      channel: "Sony Music India",
+      views: "64M views",
+      timestamp: "6 year ago",
+      category: "Music",
+      channelImage: "https://yt3.ggpht.com/ytc/AKedOLRSu0SoelpGmqyAj7H-l9AvN_a4GiV145VwyF4yqA=s88-c-k-c0x00ffffff-no-rj"
+  },
+  {
+    _id: "lSYKQjg_5ZQ",
+    title: "Far Cry 6 - Full Game Cinematic Playthrough - 4K RTX ON",
+    description:
+      "Enjoyed Day 1? Day 2 is going to be even more exciting! Your favorite streamers are pumped up to take the party to the next level and kick-start the celebrations! ",
+      image: "https://i.ytimg.com/vi/lSYKQjg_5ZQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC6iPngPdFtBAmDrjOIDAlecGXiFA",
+      channel: "DraKulis Cinematic Gaming",
+      views: "855k views",
+      timestamp: " 1 year ago",
+      category: "Gaming",
+      channelImage: "https://yt3.ggpht.com/tpIz_gOdjODAa-7cgoWw_RuVtoQfF-yUmbBoPivZjyYkslMTAI7GbgITMRW4e4hVajvRhdI2=s88-c-k-c0x00ffffff-no-rj"
+  }
+]},
+
   {
     _id: "SC67OTiA_j0",
     title: "Lee Chong Wei - Crazy Speed & SKILLS - The very best",

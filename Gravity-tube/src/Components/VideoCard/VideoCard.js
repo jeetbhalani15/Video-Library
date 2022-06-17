@@ -103,10 +103,10 @@ function VideoCard({ video }) {
 
                   <span>Save to playlist</span>
                 </div>
-                <div className="options">
+                {/* <div className="options">
                   <RiShareForwardLine size={25} />
                   <span>Share</span>
-                </div>
+                </div> */}
               </div>
             )}
           </div>

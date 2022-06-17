@@ -30,7 +30,7 @@ function Navbar() {
   });
 
   return (
-    <div className="navbar">
+    <div className="navbar nav">
       {/* NAVBAR_LEFT_SECTION */}
 
       <div className="navbar--left">

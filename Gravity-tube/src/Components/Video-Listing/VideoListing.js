@@ -16,10 +16,10 @@ function VideoListing() {
           (item) => item.category === filterState.category
         );
 
-  const SearchResult = filteredDataByCategory.filter(
+  const SearchResult = filteredDataByCategory?.filter(
     (item) =>
-      item.title.toLowerCase().includes(search.toLowerCase().trim()) ||
-      item.channel.toLowerCase().includes(search.toLowerCase().trim())
+      item.title?.toLowerCase().includes(search.toLowerCase().trim()) ||
+      item.channel?.toLowerCase().includes(search.toLowerCase().trim())
   );
 
   return (

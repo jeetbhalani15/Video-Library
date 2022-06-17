@@ -115,6 +115,13 @@
         gap: 8rem;
         /* padding: 1rem; */
     }
+    .navbar--input {
+        display: flex;
+        align-items: center;
+        width: 44%;
+        margin-right: 14rem;
+        border: 1px solid #616161;
+    }
     .video-info {
         /* height: 8rem; */
         color: white;
@@ -129,8 +136,7 @@
         margin-top: 0.8rem;
         font-size: 1.1rem;
         color: darkgrey;
-    }
-      
+    }  
   }
   @media screen and (max-width:760px) {
     .views {
@@ -140,6 +146,13 @@
         margin-top: 0.8rem;
         font-size: 1.1rem;
         color: darkgrey;
+    }
+    .navbar--input {
+        display: flex;
+        align-items: center;
+        width: 39%;
+        margin-right: 7rem;
+        border: 1px solid #616161;
     }
   }
 

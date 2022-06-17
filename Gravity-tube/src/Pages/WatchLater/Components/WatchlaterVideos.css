@@ -233,6 +233,16 @@ hr{
     .horizontal-video-card{
         width: 42rem;
     }
+    .logo-size {
+        display: none;
+    }
+    .navbar--input {
+        display: flex;
+        align-items: center;
+        width: 35%;
+        margin-right: 0rem;
+        border: 1px solid #616161;
+    }
 }
 @media screen and (max-width:730px) {
     .horizontal-video-card {
@@ -240,6 +250,16 @@ hr{
     }
     .container{
         height: fit-content;
+    }
+    .navbar--input>input {
+        /* flex: 1; */
+        width: 100%;
+        border: none;
+        padding: 0.4rem;
+        background: transparent;
+        outline: none;
+        color: white;
+        font-size: 1.1rem;
     }
     
 }
@@ -266,32 +286,131 @@ hr{
     .logo-txt{
         font-size: 0.5rem;
     }
-    .navbar--input{
-        display: none;
-    }
 }
 @media screen and (max-width:470px) {
   
     .sidebar-box {
+        position: fixed;
         display: flex;
-        overflow: auto;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #222121e3;
+        bottom: 0%;
+        z-index: 20;
+        padding: 0.3rem;
     }
-   
+    .sidebar-row {
+        display: flex;
+        align-items: center;
+        padding: 6px 19px;
+    }
     .container{
         display: block;
         height: calc(100vh - 0rem);
     }
-    .navbar{
-        display: block;
+    .guest-login-btn {
+        width: -moz-fit-content;
+        width: fit-content;
+        padding: 0.5rem 2.7rem;
+        background-color: #009688;
+        border: none;
+        color: white;
+        margin-top: 1rem;
+        font-size: 1rem;
     }
+    .auth-signup-btn {
+        width: -moz-fit-content;
+        width: fit-content;
+        padding: 0.5rem 5.7rem;
+        background-color: #009688;
+        border: none;
+        color: white;
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+
+    .login-credals {
+    position: relative;
+    width: 18rem;
 }
-@media screen and (max-width:320px) {
-    .horizontal-video-card{
-        display: block;
-        width: 15rem;
-        
+.navbar--input {
+    display: flex;
+    align-items: center;
+    width: 46%;
+    margin-right: -10rem;
+    border: 1px solid #616161;
+}
+.single-chip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fdfdfd47;
+    padding: 0.rem 1rem;
+    padding: 3px 12px;
+    border-radius: 30px;
+    color: #fafafad6;
+    font-weight: 600;
+}
+}
+@media screen and (max-width: 320px) {
+  
+    .sidebar-box {
+        width: 20rem;
     }
-    .horizontal-card-img{
-        width: 14rem;
+    .sidebar-title {
+        font-size: 9px;
+        margin-left: 0;
+    }
+    .body-content{
+        display: block;
+        height: 100%;
+    }
+    .single-chip {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #fdfdfd47;
+        padding: 0.rem 1rem;
+        padding: 4px 4px;
+        border-radius: 30px;
+        color: #fafafad6;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .login-content {
+        background-color: #ffffffd6;
+        margin-left: -2rem;
+        width: 15rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 3rem;
+        font-size: 1.3rem;
+        border: 0px solid #ff8080;
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    .login-credals {
+        position: relative;
+        width: 10rem;
+    }
+    .guest-login-btn {
+        padding: 0.5rem 1.7rem;
+        background-color: #009688;
+        border: none;
+        color: white;
+        margin-top: 1rem;
+        font-size: .7rem;
+    }
+    .auth-signup-btn {
+        width: -moz-fit-content;
+        width: fit-content;
+        padding: 0.5rem 3.7rem;
+        background-color: #009688;
+        border: none;
+        color: white;
+        margin-top: 1rem;
+        font-size: .7rem;
     }
 }

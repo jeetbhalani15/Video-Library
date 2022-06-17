@@ -199,7 +199,7 @@ const VideoProvider = ({ children }) => {
         });
         toast.success("Added to video History!", toastProp);
       } catch (error) {
-        toast.error("Something went wrong", toastProp);
+        // toast.error("Something went wrong", toastProp);
       }
     } else {
       navigate("/login");

@@ -13,29 +13,30 @@ import "./Sidebar.css";
 import { Link } from "react-router-dom";
 
 function Sidebar() {
+ 
   return (
     <div className="sidebar-box">
       <Link className="link" to={"/"}>
         {" "}
-        <SidebarRow selected Icon={TiHome} title="Home" />
+        <SidebarRow  Icon={TiHome} title="Home" />
       </Link>
-      <SidebarRow Icon={MdOutlineExplore} title="Explore" />
-      <SidebarRow Icon={MdOutlineSubscriptions} title="Subscription" />
+      {/* <SidebarRow Icon={MdOutlineExplore} title="Explore" /> */}
+      {/* <SidebarRow Icon={MdOutlineSubscriptions} title="Subscription" /> */}
+      <Link className="link" to={"/history"}>
+        <SidebarRow Icon={RiHistoryFill} title="History" />
+      </Link>
       <hr />
       <Link className="link" to={"/my-playlist"}>
         <SidebarRow Icon={MdPlaylistPlay} title="Playlist" />
       </Link>
-      <Link className="link" to={"/history"}>
-        <SidebarRow Icon={RiHistoryFill} title="History" />
-      </Link>
-      <SidebarRow Icon={RiVideoFill} title="Your videos" />
+      {/* <SidebarRow Icon={RiVideoFill} title="Your videos" /> */}
       <Link className="link" to={"/watchLater"}>
         <SidebarRow Icon={MdWatchLater} title="Watch later" />
       </Link>
       <Link className="link" to={"/likedvideos"}>
         <SidebarRow Icon={AiFillLike} title="Liked videos" />
       </Link>
-      <SidebarRow Icon={MdExpandMore} title="Show more" />
+      {/* <SidebarRow Icon={MdExpandMore} title="Show more" /> */}
       <hr />
     </div>
   );
